@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Juan Lucas | Shopping</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-</head>
-  <h1> Asics and Button Downs </h1>
+  <head>
+      <title>Juan Lucas | Shopping</title>
 
-  <h3>What's good with these Asics, you got some for me? </h3>
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 
-  <p> {{ asics }} </p>
+        </head>
 
-  <h3>I need a shirt, can you find something for me?</h3>
+            <h1> Asics and Button Downs </h1>
+              <div class="jumbotron">
 
-  <p> {{ jcrew }} </p>
+                  <h3>What's good with these Asics, you got some for me? </h3>
+                          <a href='http://www.onitsukatiger.com/us/en-us/mens/c/mens-shoes?q=:relevance:gender:MALE:shoeSizeCode:10.5:model:Colorado%20Eighty-Five' target="_blank">
+                            <movie><h2> {{ asics }} </h2></movie></a>
+
+                  <h3>I need a shirt, can you find something for me?</h3>
+                          <a href='https://www.jcrew.com/search2/index.jsp?N=21+16+10002+11998&Nloc=en&Ntrm=&Npge=1&Nrpp=48&Nsrt=3&hasSplitResults=false' target="_blank">
+                            <movie><h2> {{ jcrew }} </h2></movie></a>
+              </div>
 
 
-  <p> So no joke I wear a uniform </p>
+            <p> So no joke I wear a uniform </p>
 </html>

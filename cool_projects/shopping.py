@@ -33,7 +33,7 @@ def asics(max_price=100):
     quant = len(get_sales(products=products, max_price=max_price))
 
     if quant >0:
-        return('hey john luck there are {} shoes that would interest you'.format(quant))
+        return('hey john luck there are {} shoes that would interest you!'.format(quant))
     else:
         return(rejection())
 
