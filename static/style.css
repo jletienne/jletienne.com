@@ -3,6 +3,8 @@ a, h1, h2       { color: #377ba8; }
 h1, h2          { font-family: 'Georgia', serif; margin: 0; }
 h1              { border-bottom: 2px solid #3cdede; }
 h2              { font-size: 1.2em; }
+strong          { font-weight: 900}
+movie           { font-weight: 900; text-decoration: underline; font-size: 2em }
 
 .page           { margin: 2em auto; width: 35em; border: 5px solid #ccc;
                   padding: 0.8em; background: white; }
@@ -16,3 +18,5 @@ h2              { font-size: 1.2em; }
 .flash          { background: #cee5F5; padding: 0.5em;
                   border: 1px solid #aacbe2; }
 .error          { background: #f0d6d6; padding: 0.5em; }
+
+.jumbotron      { background: #cee5F5; margin: auto; width: 80%; padding: 2em; text-align: center}
