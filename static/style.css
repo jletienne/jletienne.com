@@ -20,8 +20,13 @@ strong          { font-weight: 900}
 .error          { background: #f0d6d6; padding: 0.5em; }
 
 
-movie          { font-weight: 900; text-decoration: underline; font-size: 2em }
+movie           { font-weight: 900; text-decoration: underline; font-size: 2em }
 .jumbotron      { margin: auto; width: 80%; padding: 2em;
                 text-align: center}
 .jumbojet       { background: #cee5F5; margin: auto; width: 80%; padding: 2em;
                 text-align: center}
+
+
+.btn-primary    { background: #3cdede; height:70px; width:250px; border-radius: 50px; color: rgba(0, 0, 0,1);}
+
+.btn-primary:hover {background: #eee; height: 70px; width:250px; border-radius:50px; color: #3cdede;}
