@@ -1,6 +1,7 @@
 from flask import Flask, render_template,request, redirect, url_for
 from cool_projects.movies import *
 from cool_projects.shopping import *
+from cool_projects.apple import *
 
 app = Flask(__name__)
 
@@ -32,6 +33,9 @@ def films():
 def shopping():
     return render_template('projects/shopping.html', asics=asics(), jcrew=jcrew())
 
+@app.route('/apple')
+def apple():
+    return render_template('projects/apple.html', apple=applebot())
 
 
 if __name__ == '__main__':
