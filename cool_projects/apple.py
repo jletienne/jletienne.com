@@ -23,7 +23,7 @@ def applebot():
    apple2 = re.findall(make_regex2(), "".join(apple))[:-1]
    x = "|".join(apple2)
    x = x.replace('&nbsp;', ' ')
-   x = x.replace('&amp;'), '&'
+   x = x.replace('&amp;', '&')
    x = x.replace('&#8217;', "\\'")
 
    return x
