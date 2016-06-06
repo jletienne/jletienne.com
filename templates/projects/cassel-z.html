@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juan Lucas | Cassel-Z</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+  <h1> Cassel-Z </h1>
+
+    <div class='page'>
+
+        <h3> {{ cassel['Name'] }} </h3>
+
+        <h4> plays for the the following teams </h4>
+
+        <h4> {{ cassel['Teams'] }} </h4>
+
+        <h4> Next Event - {{ cassel2['Team'] }} ({{ cassel2['Sport'] }})</h4>
+
+        <h4> .....Date: <gameInfo> {{ cassel2['Events']['2016-07-16-Event1']['Date'] }} </gameInfo> </h4>
+
+        <h4> .....Opponent: <gameInfo> {{ cassel2['Events']['2016-07-16-Event1']['Opponent'] }} </gameInfo> </h4>
+
+        <h4> .....Location: <gameInfo> {{ cassel2['Events']['2016-07-16-Event1']['Location']}} @ {{ cassel2['Events']['2016-07-16-Event1']['Time'] }} </gameInfo> </h4>
+
+        <h4> .....Attire: <gameInfo> {{ cassel2['Events']['2016-07-16-Event1']['Jersey'] }} </gameInfo> </h4>
+
+    </div>
+
+
+</html>

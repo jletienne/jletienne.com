@@ -24,6 +24,7 @@ def applebot():
    x = "|".join(apple2)
    x = x.replace('&nbsp;', ' ')
    x = x.replace('&amp;', '&')
+   x = x.replace('&#8243;', '"')
    x = x.replace('&#8217;', "\\'")
 
    return x

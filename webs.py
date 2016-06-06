@@ -2,6 +2,9 @@ from flask import Flask, render_template,request, redirect, url_for
 from cool_projects.movies import *
 from cool_projects.shopping import *
 from cool_projects.apple import *
+from cool_projects.cassel import *
+from cool_projects.chomba import *
+
 
 app = Flask(__name__)
 
@@ -25,6 +28,7 @@ def projects():
 def lights():
     return render_template('projects/lights.html')
 
+@app.route('/movies')
 @app.route('/films')
 def films():
     return render_template('projects/films.html', movie=request_movie())
@@ -36,6 +40,17 @@ def shopping():
 @app.route('/apple')
 def apple():
     return render_template('projects/apple.html', apple=applebot())
+
+@app.route('/casselz')
+@app.route('/cassel-z')
+def casselz():
+    return render_template('projects/cassel-z.html', cassel=cassel(), cassel2=cassel2())
+
+@app.route('/chombas')
+@app.route('/chupacabras')
+def chombas():
+    date = getNextEvent(team='Chupacabras')
+    return render_template('projects/chombas.html', eventInfo=eventInfo(team='Chupacabras', date=date), teamInfo=teamInfo('Chupacabras'))
 
 
 if __name__ == '__main__':
