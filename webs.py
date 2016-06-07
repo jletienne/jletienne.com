@@ -52,6 +52,12 @@ def chombas():
     date = getNextEvent(team='Chupacabras')
     return render_template('projects/chombas.html', eventInfo=eventInfo(team='Chupacabras', date=date), teamInfo=teamInfo('Chupacabras'))
 
+@app.route('/cha-ching')
+@app.route('/chaching')
+def chaching():
+    date = getNextEvent(team='Cha-Ching')
+    return render_template('projects/cha-ching.html', eventInfo=eventInfo(team='Cha-Ching', date=date), teamInfo=teamInfo('Cha-Ching'))
+
 
 if __name__ == '__main__':
     #app.debug = True
