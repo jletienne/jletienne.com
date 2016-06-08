@@ -6,6 +6,7 @@ import re
 
 def asics(max_price=100):
     URL = 'http://www.onitsukatiger.com/us/en-us/mens/c/mens-shoes?q=:relevance:gender:MALE:shoeSizeCode:10.5:model:Colorado%20Eighty-Five'
+
     def html_source(URL):
         return requests.get(URL).text
 
@@ -33,9 +34,10 @@ def asics(max_price=100):
     quant = len(get_sales(products=products, max_price=max_price))
 
     if quant >0:
-        return('hey john luck there are {} shoes that would interest you!'.format(quant))
+        text = 'hey john luck there are {} shoes that would interest you!'.format(quant)
     else:
-        return(rejection())
+        text = rejection()
+    return {'Text': text, 'Max_Price': max_price}
 
 def jcrew(max_price=50):
     URL = 'https://www.jcrew.com/search2/index.jsp?N=21+16+10002+11998&Nloc=en&Ntrm=&Npge=1&Nrpp=48&Nsrt=3&hasSplitResults=false'
@@ -49,12 +51,12 @@ def jcrew(max_price=50):
         return products
 
     def make_regex2():
-        ips = ['<a href="https://www.jcrew.com/sale.jsp">extra (.*?)%']
+        ips = ['sale.jsp">extra (.*?)%']
         prices = "".join(ips)
         return prices
 
     def make_regex3():
-        ips = ['i>In stores & online:</i> (.*?)%', ' off']
+        ips = ['i>In stores & online:</i> (.*?)%', 'off']
         prices = "".join(ips)
         print(ips)
         return prices
@@ -86,9 +88,11 @@ def jcrew(max_price=50):
     quant = len(get_sales(products=products, max_price = max_price))
 
     if quant >0:
-        return('yoooo juan lucas there are {} shirts that may fit you, since the discount is {}%'.format(quant, discount))
+        text = 'yoooo juan lucas there are {} shirts that may fit you, since the discount is {}%'.format(quant, discount)
     else:
-        return(rejection())
+        text = rejection()
+
+    return {'Text': text, 'Max_Price': max_price}
 
 
 if __name__ == "__main__":

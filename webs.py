@@ -35,7 +35,16 @@ def films():
 
 @app.route('/shopping')
 def shopping():
-    return render_template('projects/shopping.html', asics=asics(), jcrew=jcrew())
+    return render_template('projects/shopping.html', asics=asics(max_price=100), jcrew=jcrew(max_price=50))
+
+
+@app.route('/shoppin', methods=['POST', 'GET'])
+def shoppin():
+    max_asics=int(request.form['max_asics'])
+    max_jcrew=int(request.form['max_jcrew'])
+    return render_template('projects/shopping.html', asics=asics(max_price=max_asics), jcrew=jcrew(max_price=max_jcrew))
+
+    #return render_template('projects/shopping.html', asics=asics(max_price=request.form['max_asics']), jcrew=jcrew(max_price=request.form['max_jcrew']))
 
 @app.route('/apple')
 def apple():
@@ -60,5 +69,5 @@ def chaching():
 
 
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     app.run()
