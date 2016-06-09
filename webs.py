@@ -73,6 +73,13 @@ def orange():
     date = getNextEvent(team='Orange')
     return render_template('projects/orange.html', eventInfo=eventInfo(team='Orange', date=date), teamInfo=teamInfo('Orange'))
 
+@app.route('/black')
+def black():
+    team='Black'
+    date = getNextEvent(team=team)
+    return render_template('projects/{}.html'.format(team), eventInfo=eventInfo(team=team, date=date), teamInfo=teamInfo(team))
+
+
 
 if __name__ == '__main__':
     #app.debug = True
