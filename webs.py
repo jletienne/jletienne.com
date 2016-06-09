@@ -68,6 +68,12 @@ def chaching():
     return render_template('projects/cha-ching.html', eventInfo=eventInfo(team='Cha-Ching', date=date), teamInfo=teamInfo('Cha-Ching'))
 
 
+@app.route('/orange')
+def orange():
+    date = getNextEvent(team='Orange')
+    return render_template('projects/orange.html', eventInfo=eventInfo(team='Orange', date=date), teamInfo=teamInfo('Orange'))
+
+
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     app.run()

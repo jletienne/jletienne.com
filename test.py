@@ -54,7 +54,7 @@ def doAll():
     print(chomba(start_time='07:00 pm', opponent='Minor Threat', month=7, day=16))
     print(chomba(start_time='08:15 pm', opponent='Trout', month=7, day=23))
     print(chomba(start_time='07:00 pm', opponent='Royals', month=7, day=30))
-    '''
+
 
     print(chomba(start_time='07:00 pm', opponent='Knicks', month=6, day=3, year=2016, team='Cha-Ching', location='The Core'))
     print(chomba(start_time='07:00 pm', opponent='Dream Team', month=6, day=10, year=2016, team='Cha-Ching', location='The Core'))
@@ -64,8 +64,9 @@ def doAll():
     print(chomba(start_time='08:00 pm', opponent='ULINE', month=7, day=8, year=2016, team='Cha-Ching', location='The Core'))
     print(chomba(start_time='07:00 pm', opponent='Knicks', month=7, day=15, year=2016, team='Cha-Ching', location='The Core'))
     print(chomba(start_time='07:00 pm', opponent='Dream Team', month=7, day=22, year=2016, team='Cha-Ching', location='The Core'))
+    '''
 
-
+    print(chomba(start_time='11:00 AM', opponent='Grapes of Wrath', month=6, day=11, year=2016, team='Orange', location='Carson Beach'))
 
 if __name__ == "__main__":
     #print(getNextEvent(team='Chupacabras'))
