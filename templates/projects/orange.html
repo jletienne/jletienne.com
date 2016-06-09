@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juan Lucas | {{ teamInfo['Team'] }}</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+  <h1> {{ teamInfo['Team'] }} </h1>
+
+    <div class='page'>
+        <h3> Next Event - {{ teamInfo['Team'] }} ({{ teamInfo['Sport'] }})</h3>
+        <h3> {{ eventInfo['Weekday'] }}, {{ eventInfo['Date'] }} </h3>
+        <h3> {{ eventInfo['Start_Time'] }} @ {{ eventInfo['Location'] }} </h3>
+        <h3> Opponent: {{ eventInfo['Opponent'] }} </h3>
+
+
+        <!-- <h3> Confirmed Players: {{ eventInfo }} </h3>
+        <h3> Declined Players: {{ eventInfo }} </h3> -->
+
+    </div>
+
+
+</html>
