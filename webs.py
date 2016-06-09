@@ -76,7 +76,7 @@ def orange():
 @app.route('/black')
 def black():
     date = getNextEvent(team='Black')
-    return render_template('projects/Black.html', eventInfo=eventInfo(team='Black', date=date), teamInfo=teamInfo('Black'))
+    return render_template('projects/black.html', eventInfo=eventInfo(team='Black', date=date), teamInfo=teamInfo('Black'))
 
 
 
