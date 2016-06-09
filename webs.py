@@ -77,7 +77,7 @@ def orange():
 def black():
     team='Black'
     date = getNextEvent(team=team)
-    return render_template('projects/{}.html'.format(team), eventInfo=eventInfo(team=team, date=date), teamInfo=teamInfo(team))
+    return render_template('projects/Black.html', eventInfo=eventInfo(team=team, date=date), teamInfo=teamInfo(team))
 
 
 
