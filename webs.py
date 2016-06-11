@@ -59,24 +59,30 @@ def casselz():
 @app.route('/chupacabras')
 def chombas():
     date = getNextEvent(team='Chupacabras')
-    return render_template('projects/chombas.html', eventInfo=eventInfo(team='Chupacabras', date=date), teamInfo=teamInfo('Chupacabras'))
+    return render_template('teams/chombas.html', eventInfo=eventInfo(team='Chupacabras', date=date), teamInfo=teamInfo('Chupacabras'))
 
 @app.route('/cha-ching')
 @app.route('/chaching')
 def chaching():
     date = getNextEvent(team='Cha-Ching')
-    return render_template('projects/cha-ching.html', eventInfo=eventInfo(team='Cha-Ching', date=date), teamInfo=teamInfo('Cha-Ching'))
+    return render_template('teams/cha-ching.html', eventInfo=eventInfo(team='Cha-Ching', date=date), teamInfo=teamInfo('Cha-Ching'))
 
 
 @app.route('/orange')
 def orange():
     date = getNextEvent(team='Orange')
-    return render_template('projects/orange.html', eventInfo=eventInfo(team='Orange', date=date), teamInfo=teamInfo('Orange'))
+    return render_template('teams/orange.html', eventInfo=eventInfo(team='Orange', date=date), teamInfo=teamInfo('Orange'))
 
 @app.route('/black')
 def black():
     date = getNextEvent(team='Black')
-    return render_template('projects/black.html', eventInfo=eventInfo(team='Black', date=date), teamInfo=teamInfo('Black'))
+    return render_template('teams/black.html', eventInfo=eventInfo(team='Black', date=date), teamInfo=teamInfo('Black'))
+
+@app.route('/dreamteam')
+@app.route('/dream')
+def dream():
+    date = getNextEvent(team='Dream')
+    return render_template('teams/dream.html', eventInfo=eventInfo(team='Dream', date=date), teamInfo=teamInfo('Dream'))
 
 
 

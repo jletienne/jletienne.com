@@ -5,8 +5,8 @@ import re
 import datetime
 import calendar
 
-def getPlayers():
-    URL = 'https://chup-chombas.firebaseio.com/Chupacabras/Players.json'
+def getPlayers(team='None'):
+    URL = 'https://chup-chombas.firebaseio.com/{}/Players.json'.format(team)
 
     r = requests.get(URL).json()
     return r
@@ -21,7 +21,7 @@ def chomba(start_time = 'None', location='None', team='None', opponent = 'None',
                     'Start_Time': start_time,
                     'Location': location,
                     'Opponent': opponent,
-                    'Players': getPlayers(),
+                    'Players': getPlayers(team),
                     'Date': '{:%b %d, %Y}'.format(my_date),
                     'Weekday': weekday
                 }
@@ -67,9 +67,20 @@ def doAll():
 
 
     print(chomba(start_time='11:00 AM', opponent='Grapes of Wrath', month=6, day=11, year=2016, team='Orange', location='Carson Beach'))
-    '''
+
 
     print(chomba(start_time='7:15 PM', opponent='Indeed 2', month=6, day=13, year=2016, team='Black', location='CPCT (Red)'))
+    '''
+
+    print(chomba(start_time='09:00 pm', opponent='Tropics', month=6, day=3, year=2016, team='Dream', location='The Core'))
+    print(chomba(start_time='07:00 pm', opponent='Cha-Ching', month=6, day=10, year=2016, team='Dream', location='The Core'))
+    print(chomba(start_time='07:00 pm', opponent='Knicks', month=6, day=17, year=2016, team='Dream', location='The Core'))
+    print(chomba(start_time='08:00 pm', opponent='ULINE', month=6, day=24, year=2016, team='Dream', location='The Core'))
+    print(chomba(start_time='All Day', opponent='', month=7, day=4, year=2016, team='Dream', location='USA'))
+    print(chomba(start_time='09:00 pm', opponent='Last One Picked', month=7, day=8, year=2016, team='Dream', location='The Core'))
+    print(chomba(start_time='09:00 pm', opponent='Tropics', month=7, day=15, year=2016, team='Dream', location='The Core'))
+    print(chomba(start_time='07:00 pm', opponent='Cha-Ching', month=7, day=22, year=2016, team='Dream', location='The Core'))
+
 
 if __name__ == "__main__":
     #print(getNextEvent(team='Chupacabras'))
