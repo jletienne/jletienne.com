@@ -85,6 +85,10 @@ def dream():
     return render_template('teams/dream.html', eventInfo=eventInfo(team='Dream', date=date), teamInfo=teamInfo('Dream'))
 
 
+@app.route('/trout')
+def trout():
+    date = getNextEvent(team='Trout')
+    return render_template('teams/trout.html', eventInfo=eventInfo(team='Trout', date=date), teamInfo=teamInfo('Trout'))
 
 if __name__ == '__main__':
     #app.debug = True

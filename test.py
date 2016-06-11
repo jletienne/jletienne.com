@@ -21,7 +21,7 @@ def chomba(start_time = 'None', location='None', team='None', opponent = 'None',
                     'Start_Time': start_time,
                     'Location': location,
                     'Opponent': opponent,
-                    'Players': getPlayers(team),
+                    #'Players': getPlayers(team),
                     'Date': '{:%b %d, %Y}'.format(my_date),
                     'Weekday': weekday
                 }
@@ -70,7 +70,7 @@ def doAll():
 
 
     print(chomba(start_time='7:15 PM', opponent='Indeed 2', month=6, day=13, year=2016, team='Black', location='CPCT (Red)'))
-    '''
+
 
     print(chomba(start_time='09:00 pm', opponent='Tropics', month=6, day=3, year=2016, team='Dream', location='The Core'))
     print(chomba(start_time='07:00 pm', opponent='Cha-Ching', month=6, day=10, year=2016, team='Dream', location='The Core'))
@@ -80,7 +80,16 @@ def doAll():
     print(chomba(start_time='09:00 pm', opponent='Last One Picked', month=7, day=8, year=2016, team='Dream', location='The Core'))
     print(chomba(start_time='09:00 pm', opponent='Tropics', month=7, day=15, year=2016, team='Dream', location='The Core'))
     print(chomba(start_time='07:00 pm', opponent='Cha-Ching', month=7, day=22, year=2016, team='Dream', location='The Core'))
-
+    '''
+    print(chomba(start_time='10:00 pm', opponent='Ice Cougars', month=6, day=4, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time='10:00 pm', opponent='Chupacabras', month=6, day=11, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time='07:30 pm', opponent='Royals', month=6, day=18, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time='07:30 pm', opponent='Minor Threat', month=6, day=25, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time=' All Day', opponent='Fourth of July', month=7, day=4, year=2016, team='Trout', location='USA'))
+    print(chomba(start_time='07:00 pm', opponent='Lightning', month=7, day=9, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time='08:15 pm', opponent='Ice Cougars', month=7, day=16, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time='08:15 pm', opponent='Chupacabras', month=7, day=23, year=2016, team='Trout', location='Allen Community Ice Rink'))
+    print(chomba(start_time='08:15 pm', opponent='Lightning', month=7, day=30, year=2016, team='Trout', location='Allen Community Ice Rink'))
 
 if __name__ == "__main__":
     #print(getNextEvent(team='Chupacabras'))
