@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Up, Ball Out | Juan Lucas</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+  <h1> Find Your Team </h1>
+
+    <div class='page'>
+      <select>
+      {% for team in teams %}
+
+          <h3> {{ teams }} </3>
+      {% endfor %}
+      </select>
+
+    </div>
+
+    <p> {{ teams["Black"] }} </p>
+
+</html>
