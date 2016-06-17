@@ -99,7 +99,14 @@ def getTeams():
     return r
 
 
+def incrementTrip(team='None'):
+    URL = 'https://chup-chombas.firebaseio.com/Teams/{}/Visits.json'.format(team)
+    r = requests.get(URL).json()
+    increment = r + 1
+    doIt = requests.put(URL, data=json.dumps(increment))
+    return URL
+
 
 if __name__ == "__main__":
-    print(datetime.date.today())
+    #print(incrementTrip('Black'))
     #print(doAll())

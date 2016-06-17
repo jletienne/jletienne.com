@@ -23,13 +23,20 @@ def addEvent(start_time = '10 pm', location = 'location', opponent = 'Opponent',
                     'Location': location,
                     'Opponent': opponent,
                     'Players': players,
-                    'Date': '{:%b %d, %Y}'.format(my_date),
+                    'Date': '{:%B %d, %Y}'.format(my_date),
                     'Date2': my_date,
                     'Weekday': weekday,
                 }
 
     r = requests.put(URL, data=json.dumps(gameinfo))
     return URL
+
+def incrementTrip(team='None'):
+    URL = 'https://chup-chombas.firebaseio.com/Teams/{}/Visits.json'.format(team)
+    r = requests.get(URL).json()
+    increment = r + 1
+    doIt = requests.put(URL, data=json.dumps(increment))
+    return doIt
 
 def eventInfo(date, team='None'):
    if date == 'No Next Event':
@@ -38,7 +45,7 @@ def eventInfo(date, team='None'):
 
    URL = 'https://chup-chombas.firebaseio.com/Teams/{}/Events/{}/.json'.format(team, date)
    r = requests.get(URL).json()
-
+   incrementTrip(team=team)
    return r
 
 def teamInfo(team='None'):
@@ -68,7 +75,6 @@ def getTeams():
     URL = 'https://chup-chombas.firebaseio.com/Teams.json'
     r = requests.get(URL).json()
     return r
-
 
 
 if __name__ == "__main__":

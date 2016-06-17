@@ -91,9 +91,10 @@ def trout():
 
 @app.route('/teams')
 def teams():
+    incrementTrip(team='Teams')
     return render_template('teams/zteams.html', teams = getTeams())
 
 
 if __name__ == '__main__':
-    app.debug = True
+    #app.debug = True
     app.run()
