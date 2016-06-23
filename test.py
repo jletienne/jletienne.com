@@ -91,7 +91,7 @@ def doAll():
     print(chomba(start_time='08:15 pm', opponent='Chupacabras', month=7, day=23, year=2016, team='Trout', location='Allen Community Ice Rink'))
     print(chomba(start_time='08:15 pm', opponent='Lightning', month=7, day=30, year=2016, team='Trout', location='Allen Community Ice Rink'))
     '''
-
+    print(chomba(team='Hit_This', start_time='8:50 pm', opponent='Roll Toad', month=6, day=27, year=2016, location='Glencoe Park'))
 
 def getTeams():
     URL = 'https://chup-chombas.firebaseio.com/Teams.json'
@@ -109,4 +109,4 @@ def incrementTrip(team='None'):
 
 if __name__ == "__main__":
     #print(incrementTrip('Black'))
-    #print(doAll())
+    print(doAll())

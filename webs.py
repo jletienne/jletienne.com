@@ -89,6 +89,13 @@ def trout():
     date = getNextEvent(team='Trout')
     return render_template('teams/trout.html', eventInfo=eventInfo(team='Trout', date=date), teamInfo=teamInfo('Trout'))
 
+@app.route('/hits')
+@app.route('/hitthis')
+def hitthis():
+    date = getNextEvent(team='Hit_This')
+    return render_template('teams/hits.html', eventInfo=eventInfo(team='Hit_This', date=date), teamInfo=teamInfo('Hit_This'))
+
+
 @app.route('/teams')
 def teams():
     incrementTrip(team='Teams')
