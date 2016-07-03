@@ -19,18 +19,23 @@
                             <movie><h2> {{ jcrew['Text'] }} </h2></movie></a>
               </div>
 
-              <div id="content">
+
                   <form method="post" autocomplete="on" action="{{ url_for('shoppin') }}">
 
-                    <h3><label for="max_asics">Asics Max Price:</label></h3>
-                    <input type="text" name="max_asics" value= {{ asics['Max_Price'] }} /><br />
-
-                    <h3><label for="max_jcrew">Shirt Max Price:</label></h3>
-                    <input type="text" name="max_jcrew" value= {{ jcrew['Max_Price'] }} /><br />
-                    <input type="submit" />
-              </div>
-
-
+              <div style="text-align:center;">
+                  <table style="width:100%" align="center">
+                    <tr>
+                      <td><h3><label for="max_asics">Asics Max Price:</label></h3></td>
+                      <td><h3><label for="max_jcrew">Shirt Max Price:</label></h3></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" name="max_asics" value= {{ asics['Max_Price'] }} /></td>
+                      <td><input type="text" name="max_jcrew" value= {{ jcrew['Max_Price'] }} /></td>
+                    </tr>
+                  </table>
+                  <td><input type="submit" /></td>
+                </form>
+            </div>
 
             <p> So no joke I wear a uniform </p>
 </html>
