@@ -109,4 +109,4 @@ def incrementTrip(team='None'):
 
 if __name__ == "__main__":
     #print(incrementTrip('Black'))
-    print(doAll())
+    print(setVars())
