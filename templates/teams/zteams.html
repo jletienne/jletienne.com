@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Show Up, Ball Out | Juan Lucas</title>
+    <title> Show Up, Ball Out | {{ teamInfo['Team'] }}</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 </head>
-  <h1> Find Your Team </h1>
+  <h1> {{ teamInfo['Team'] }} </h1>
 
     <div class='page'>
-      <select>
-      {% for team in teams %}
+        <h3> Next Event - {{ teamInfo['Team'] }} ({{ teamInfo['Sport'] }})</h3>
+        <h3> {{ eventInfo['Weekday'] }}, {{ eventInfo['Date'] }} </h3>
+        <h3> {{ eventInfo['Start_Time'] }} @ {{ eventInfo['Location'] }} </h3>
+        <h3> Opponent: {{ eventInfo['Opponent'] }} </h3>
+        <p></p>
+        <a  href= "{{ teamInfo['URL'] }}"> CLICK HERE FOR THE FULL SCHEDULE</h4> </a>
 
-          <h3> {{ teams }} </3>
-      {% endfor %}
-      </select>
+        <!-- <h3> Confirmed Players: {{ eventInfo }} </h3>
+        <h3> Declined Players: {{ eventInfo }} </h3> -->
 
     </div>
 
-    <p> {{ teams["Black"] }} </p>
 
 </html>
