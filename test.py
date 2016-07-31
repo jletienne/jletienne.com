@@ -90,8 +90,23 @@ def doAll():
     print(chomba(start_time='08:15 pm', opponent='Ice Cougars', month=7, day=16, year=2016, team='Trout', location='Allen Community Ice Rink'))
     print(chomba(start_time='08:15 pm', opponent='Chupacabras', month=7, day=23, year=2016, team='Trout', location='Allen Community Ice Rink'))
     print(chomba(start_time='08:15 pm', opponent='Lightning', month=7, day=30, year=2016, team='Trout', location='Allen Community Ice Rink'))
-    '''
+
     print(chomba(team='Hit_This', start_time='8:50 pm', opponent='Roll Toad', month=6, day=27, year=2016, location='Glencoe Park'))
+
+    print(chomba(team='Black', start_time='7:15 pm', opponent='Blue Sky', month=7, day=6, year=2016, location='Court Blue Full'))
+    print(chomba(team='Black', start_time='7:15 pm', opponent='Indeed 2', month=7, day=13, year=2016, location='Court Blue Full'))
+    print(chomba(team='Black', start_time='9:15 pm', opponent='WWE', month=7, day=20, year=2016, location='Court Blue Full'))
+    print(chomba(team='Black', start_time='8:15 pm', opponent='RSM', month=7, day=27, year=2016, location='Court Red Full'))
+    print(chomba(team='Black', start_time='9:15 pm', opponent='Gartner', month=8, day=3, year=2016, location='Court Blue Full'))
+    print(chomba(team='Black', start_time='9:15 pm', opponent='Jumpmen', month=8, day=10, year=2016, location='Court Blue Full'))
+    print(chomba(team='Black', start_time='8:15 pm', opponent='Vineyard Vines', month=8, day=17, year=2016, location='Court Blue Full'))
+    print(chomba(team='Black', start_time='9:15 pm', opponent='Blue Sky', month=8, day=24, year=2016, location='Court Blue Full'))
+'''
+    print(chomba(team='Hit_This', start_time='8:50 pm', opponent='Roll Toad', month=7, day=11, year=2016, location='Glencoe Park'))
+    print(chomba(team='Hit_This', start_time='7:30 pm', opponent='The Crystal Mets', month=7, day=18, year=2016, location='Glencoe Park'))
+    print(chomba(team='Hit_This', start_time='9:10 pm', opponent='Balls Deep', month=7, day=25, year=2016, location='Glencoe Park'))
+    print(chomba(team='Hit_This', start_time='8:40 pm & 9:30 pm', opponent='CDC Ballers & Les Miseraballs', month=8, day=1, year=2016, location='Churchill Park'))
+    print(chomba(team='Hit_This', start_time='6:40 pm', opponent='Triage', month=8, day=8, year=2016, location='Glencoe Park'))
 
 def getTeams():
     URL = 'https://chup-chombas.firebaseio.com/Teams.json'
@@ -106,7 +121,47 @@ def incrementTrip(team='None'):
     doIt = requests.put(URL, data=json.dumps(increment))
     return URL
 
+def getEvents(team='None'):
+    URL = 'https://chup-chombas.firebaseio.com/Teams/{}/Events.json'.format(team)
+    r = requests.get(URL).json()
+    return r
+
+def getNextPlayerEvent(events='None'):
+
+    try:
+        future_events = {i for i in events if datetime.date.today() <= getDate(events[i]['Date'])}
+        next_event = sorted(future_events)[0]
+    except:
+        next_event = 'No Next Event'
+
+    return next_event
+
+def aggregate(player='None'):
+    URL = 'https://chup-chombas.firebaseio.com/Players/{}/Teams.json'.format(player)
+    r = requests.get(URL).json()
+
+    x = {}
+
+    for i in r:
+        x.update(getEvents(i))
+
+    date =  getNextPlayerEvent(x)
+
+    if date == 'No Next Event':
+       next_event_info = {'Date': 'Regular Season Over!', 'Weekday':'Had a Blast', 'Location': 'We\'ll do it again', 'Time': 'Offseason', 'Opponent': 'See You Next Season!', 'Start_Time': 'That Was Fun'}
+       return next_event_info
+
+
+    return x[date]
+
+def getPlayerName(player='None'):
+    URL = 'https://chup-chombas.firebaseio.com/Players/{}.json'.format(player)
+    r = requests.get(URL).json()
+    return r['Name']
+
 
 if __name__ == "__main__":
     #print(incrementTrip('Black'))
-    print(os.environ)
+    #doAll()
+    print(aggregate('JL'))
+    #print type(datetime.date.today())

@@ -4,20 +4,11 @@ from cool_projects.shopping import *
 from cool_projects.apple import *
 from cool_projects.cassel import *
 from cool_projects.chomba import *
+from cool_projects.roundup import *
 
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-
-# Load default config and override config from an environment variable
-app.config.update(dict(
-    DATABASE=os.path.join(app.root_path, 'flaskr.db'),
-    SECRET_KEY='development key',
-    USERNAME='admin',
-    PASSWORD='default'
-))
-app.config.from_envvar('FLASKR_SETTINGS', silent=True)
-
 
 @app.route('/')
 def hello_world():
@@ -112,7 +103,13 @@ def teams():
     incrementTrip(team='Teams')
     return render_template('teams/zteams.html', teams = getTeams())
 
+@app.route('/jl')
+def jl():
+    #date = getNextEvent(player='JL')
+    return render_template('players/jl.html', eventInfo = aggregate('JL'), playerInfo= getPlayerName('JL'))
+
+
 
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     app.run()
