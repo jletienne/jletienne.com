@@ -92,9 +92,15 @@ def trout():
     return render_template('teams/trout.html', eventInfo=eventInfo(team='Trout', date=date), teamInfo=teamInfo('Trout'))
 
 @app.route('/hardhats')
-def trout():
+def hardhats():
     date = getNextEvent(team='Hardhats')
     return render_template('teams/hardhats.html', eventInfo=eventInfo(team='Hardhats', date=date), teamInfo=teamInfo('Hardhats'))
+
+@app.route('/purple')
+def purple():
+    date = getNextEvent(team='Purple')
+    return render_template('teams/purple.html', eventInfo=eventInfo(team='Purple', date=date), teamInfo=teamInfo('Purple'))
+
 
 @app.route('/hits')
 @app.route('/hitthis')
