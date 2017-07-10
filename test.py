@@ -101,12 +101,20 @@ def doAll():
     print(chomba(team='Black', start_time='9:15 pm', opponent='Jumpmen', month=8, day=10, year=2016, location='Court Blue Full'))
     print(chomba(team='Black', start_time='8:15 pm', opponent='Vineyard Vines', month=8, day=17, year=2016, location='Court Blue Full'))
     print(chomba(team='Black', start_time='9:15 pm', opponent='Blue Sky', month=8, day=24, year=2016, location='Court Blue Full'))
-'''
+
     print(chomba(team='Hit_This', start_time='8:50 pm', opponent='Roll Toad', month=7, day=11, year=2016, location='Glencoe Park'))
     print(chomba(team='Hit_This', start_time='7:30 pm', opponent='The Crystal Mets', month=7, day=18, year=2016, location='Glencoe Park'))
     print(chomba(team='Hit_This', start_time='9:10 pm', opponent='Balls Deep', month=7, day=25, year=2016, location='Glencoe Park'))
     print(chomba(team='Hit_This', start_time='8:40 pm & 9:30 pm', opponent='CDC Ballers & Les Miseraballs', month=8, day=1, year=2016, location='Churchill Park'))
     print(chomba(team='Hit_This', start_time='6:40 pm', opponent='Triage', month=8, day=8, year=2016, location='Glencoe Park'))
+'''
+    print(chomba(team='Hardhats', start_time='7:55 pm', opponent='Tequila Makes Our Helmets Fall Off', month=7, day=11, year=2017, location='Fair Oaks Park'))
+    print(chomba(team='Hardhats', start_time='7:55 pm', opponent='Pitches Be Crazy', month=7, day=18, year=2017, location='Fair Oaks Park'))
+    print(chomba(team='Hardhats', start_time='TBA', opponent='TBA', month=7, day=25, year=2017, location='Fair Oaks Park'))
+
+    print(chomba(team='Purple', start_time='8:45pm', opponent='Red', month=8, day=3, year=2017, location='Allen Community Ice Rink'))
+    print(chomba(team='Purple', start_time='8:45pm', opponent='Yellow', month=8, day=10, year=2017, location='Allen Community Ice Rink'))
+
 
 def getTeams():
     URL = 'https://chup-chombas.firebaseio.com/Teams.json'
@@ -162,6 +170,6 @@ def getPlayerName(player='None'):
 
 if __name__ == "__main__":
     #print(incrementTrip('Black'))
-    #doAll()
-    print(aggregate('JL'))
+    doAll()
+    #print(aggregate('JL'))
     #print type(datetime.date.today())
