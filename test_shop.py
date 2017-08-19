@@ -54,7 +54,7 @@ def jcrew(max_price=50):
         return products
 
     def make_regex2():
-        ips = ['sale.jsp">extra (.*?)%']
+        ips = ['navigationInfo : (.*),']
         prices = "".join(ips)
         return prices
 
@@ -64,8 +64,8 @@ def jcrew(max_price=50):
         print(ips)
         return prices
 
-    def get_sales(products, max_price):
-        return [i for i in products if float(i['salePrice']) < max_price*100 ]
+    def get_sales(products, max_price, discount):
+        return [i for i in products if float(i['salePrice']) * (1-discount) < max_price*100 ]
 
     def rejection():
         rejects = ['nah.', 'nope.', 'nope', 'nada', 'nothing', 'nil', 'no.', 'not today', 'sorry about it', 'not yet', 'patience is a virtue']
@@ -73,28 +73,30 @@ def jcrew(max_price=50):
 
     def get_discount():
         try:
-            discount = re.findall(make_regex2(), html_source(URL))[0]
-            return re.sub(r'[^0-9]', '', str(discount)) #numbers only
+            discount = re.findall(make_regex2(), html_source(URL))
+            myJson =  json.loads(discount[0])
+            final_discount = myJson['data']['nav'][1]['navGroups'][0]['navItems'][1]['label']
+            return re.sub(r'[^0-9]', '', str(final_discount)) #numbers only
         except:
             try:
                 discount = re.findall(make_regex3(), html_source(URL))[0]
                 return re.sub(r'[^0-9]', '', str(discount)) #numbers only
             except:
-                return 0
+                return 1
 
     myObject = re.findall(make_regex(), html_source(URL))
     shirts = json.loads(myObject[0])
     shirts_list = shirts['search']['results']['products']
-    discount= int(str(get_discount())[0:2])
+    discount= float(str(get_discount())[0:2])/100
+
 
     print('the discount is {}%'.format(discount)) #error handling
 
-    #products = [float(i)*(1-float(discount)*.01) for i in re.findall(make_regex(), html_source(URL))]
 
-    quant = len(get_sales(products=shirts_list, max_price = max_price))
+    quant = len(get_sales(products=shirts_list, max_price=max_price, discount=discount))
 
     if quant >0:
-        text = 'yoooo juan lucas there are {} shirts that may fit you, since the discount is {}%'.format(quant, discount)
+        text = 'yoooo juan lucas there are {} shirts that may fit you, since the discount is {}%'.format(quant, int(discount*100))
     else:
         text = rejection()
 
