@@ -49,7 +49,7 @@ def jcrew(max_price=50):
         return requests.get(URL).text
 
     def make_regex():
-        ips = ['now <span class="product-sale-price notranslate">\s*\$(.*)</span>']
+        ips = ['pageJson: (.*),']
         products = "".join(ips)
         return products
 
@@ -65,7 +65,7 @@ def jcrew(max_price=50):
         return prices
 
     def get_sales(products, max_price):
-        return [i for i in products if i < max_price ]
+        return [i for i in products if float(i['salePrice']) < max_price*100 ]
 
     def rejection():
         rejects = ['nah.', 'nope.', 'nope', 'nada', 'nothing', 'nil', 'no.', 'not today', 'sorry about it', 'not yet', 'patience is a virtue']
@@ -82,13 +82,16 @@ def jcrew(max_price=50):
             except:
                 return 0
 
+    myObject = re.findall(make_regex(), html_source(URL))
+    shirts = json.loads(myObject[0])
+    shirts_list = shirts['search']['results']['products']
     discount= int(str(get_discount())[0:2])
 
     print('the discount is {}%'.format(discount)) #error handling
 
-    products = [float(i)*(1-float(discount)*.01) for i in re.findall(make_regex(), html_source(URL))]
+    #products = [float(i)*(1-float(discount)*.01) for i in re.findall(make_regex(), html_source(URL))]
 
-    quant = len(get_sales(products=products, max_price = max_price))
+    quant = len(get_sales(products=shirts_list, max_price = max_price))
 
     if quant >0:
         text = 'yoooo juan lucas there are {} shirts that may fit you, since the discount is {}%'.format(quant, discount)
@@ -99,4 +102,4 @@ def jcrew(max_price=50):
 
 
 if __name__ == "__main__":
-    print(asics())
+    print(jcrew())
