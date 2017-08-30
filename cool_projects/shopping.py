@@ -77,12 +77,16 @@ def jcrew(max_price=50):
                 discount = re.findall(make_regex3(), html_source(URL))[0]
                 return re.sub(r'[^0-9]', '', str(discount)) #numbers only
             except:
-                return 1
+                return 0
 
     myObject = re.findall(make_regex(), html_source(URL))
     shirts = json.loads(myObject[0])
     shirts_list = shirts['search']['results']['products']
-    discount= float(str(get_discount())[0:2])/100
+
+    try:
+        discount = float(str(get_discount())[0:2])/100
+    except:
+        discount =0
 
 
     print('the discount is {}%'.format(discount)) #error handling
