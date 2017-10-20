@@ -77,16 +77,21 @@ def jcrew(max_price=50):
                 discount = re.findall(make_regex3(), html_source(URL))[0]
                 return re.sub(r'[^0-9]', '', str(discount)) #numbers only
             except:
-                return 0
+                return 1
 
     myObject = re.findall(make_regex(), html_source(URL))
     shirts = json.loads(myObject[0])
+<<<<<<< HEAD
 
 
     try:
         discount = float(str(get_discount())[0:2])/100
     except:
         discount =0
+=======
+    shirts_list = shirts['search']['results']['products']
+    discount= float(str(get_discount())[0:2])/100
+>>>>>>> parent of 17946ee... jcrew shopping
 
 
     print('the discount is {}%'.format(discount)) #error handling
