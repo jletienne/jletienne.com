@@ -81,7 +81,7 @@ def jcrew(max_price=50):
 
     myObject = re.findall(make_regex(), html_source(URL))
     shirts = json.loads(myObject[0])
-    shirts_list = shirts['search']['results']['products']
+
 
     try:
         discount = float(str(get_discount())[0:2])/100
@@ -91,8 +91,11 @@ def jcrew(max_price=50):
 
     print('the discount is {}%'.format(discount)) #error handling
 
-
-    quant = len(get_sales(products=shirts_list, max_price=max_price, discount=discount))
+    try:
+        shirts_list = shirts['search']['results']['products']
+        quant = len(get_sales(products=shirts_list, max_price=max_price, discount=discount))
+    except:
+        quant=0
 
     if quant >0:
         text = 'yoooo juan lucas there are {} shirts that may fit you, since the discount is {}%'.format(quant, int(discount*100))
