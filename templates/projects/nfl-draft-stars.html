@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<title> NFL Stars </title>
+<h1> NFL Stars </h1>
+
+<!--
+<div class ="container; vcenter" style="text-align:center; height: 50vh">
+  <div style="display:block;text-align:center;margin-right:auto;margin-left:auto">
+    <table border="0" bordercolor="#000" cellspacing="0" style="width: 100%" align="center">
+<tbody>
+  <tr s>
+    <td style="width:50%">
+      <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href=""><img border="0"></div>
+      <h3> Incoming Picks </h3>
+    </td>
+    <td style="width:50%">
+      <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href=""><img border="0"></div>
+      <h3> Outgoing Picks </h3>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+-->
+<!--
+<form name=incoming>
+{% for post in pageInfo['picks_in'] %}
+<div>  <input type="text" value = {{ post.Pick }}> <p>{{ post.Pick }} says: <b>{{ post.Pick_Number }}</b></p></div>
+{% endfor %}
+</form>
+
+
+{{pageInfo.picks_in}}
+{{pageInfo.picks_out}}
+{{pageInfo.trade}}
+-->
+
+<p> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </p>
+<p> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </p>
+
+<table>
+      <tr>
+        <td><h2> Picks In </h2></td>
+        <td><h2> Picks Out </h2></td>
+        <td><h2> Trade Results </h2></td>
+      </tr>
+      <tr>
+        <td><h5> Probability of... </h5></td>
+        <td><h5> Probability of... </h5></td>
+        <td><h5> Change in Probability of... </h5></td>
+      </tr>
+{% for post in pageInfo['picks_sorted']%}
+    <tr>
+        <td style="width:30%">{{ post }}: {{ pageInfo['picks_in']['cleanValue'][post]  }} </td>
+        <td style="width:30%">{{ post }}: {{ pageInfo['picks_out']['cleanValue'][post]  }} </td>
+        <td style="width:30%">{{ post }}: {{ pageInfo.trade[post] }} </td>
+    </tr>
+{% endfor %}
+ </table>
+
+
+
+ <div style="text-align:center;">
+     <table style="width:100%" align="center">
+       <tr>
+         <td><h5><label for="incoming_picks">Picks In</label></h5></td>
+         <td><h5><label for="out_going_picks">Picks Out</label></h5></td>
+       </tr>
+       <tr>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_1" value= "1" /></td>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_1" value= "4" /></td>
+       </tr>
+       <tr>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_2" value= "2" /></td>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_2" value= "5" /></td>
+       </tr>
+       <tr>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_3" value= "3" /></td>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_3" value= "" /></td>
+       </tr>
+       <tr>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_4" value= "" /></td>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_4" value= "" /></td>
+       </tr>
+       <tr>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_5" value= "" /></td>
+         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_5" value= "" /></td>
+       </tr>
+     </table>
+     <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+   </form>
+ </div>
+
+{% endblock %}
+
+<!--
+<title> {{pageInfo}} </title>
+<h1> NFL Stars </h1>
+
+{{ pageInfo.posts }}
+<div><p>Hi, {{ pageInfo.user.nickname }}!</p></div>
+{% for post in pageInfo['posts'] %}
+<div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
+{% endfor %}
+
+
+<form name=incoming>
+{% for post in pageInfo['posts'] %}
+<div>  <input type="text" value = {{ post.author.nickname }}> <p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
+{% endfor %}
+</form>
+
+
+{{pageInfo.picks_in}}
+{{pageInfo.picks_out}}
+{{pageInfo.trade}}
+-->
