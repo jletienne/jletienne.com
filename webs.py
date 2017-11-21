@@ -64,6 +64,13 @@ def teams(team):
 def nfl():
     return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft())
 
+@app.route('/nfl-draft-star', methods=['POST', 'GET'])
+def nfls():
+    incoming_picks=request.form['incoming_picks']
+    outgoing_picks=request.form['outgoing_picks']
+    return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks))
+
+
 
 
 if __name__ == '__main__':

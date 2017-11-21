@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def nfl_draft():
+def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
     posts = [  # fake array of posts
         {
             'author': {'nickname': 'John'},
@@ -26,10 +26,10 @@ def nfl_draft():
         }
     ]
 
-    picks = [1,2,3]
-    picks_in = [1,2,3]
-    picks_out = [4,5,6]
 
+
+    picks_in = incoming_picks.split(",")
+    picks_out = outgoing_picks.split(",")
 
     # Get Pick JSON data from static file
     def get_picks():

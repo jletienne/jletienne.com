@@ -111,9 +111,10 @@ def nfl_draft():
         }
     ]
 
-    picks = [1,2,3]
-    picks_in = [1,2,3]
-    picks_out = [4,5,6]
+    picks_in_string = '1,2,3'
+    picks_out_string = '4,5,6'
+    picks_in = picks_in_string.split(",")
+    picks_out = picks_out_string.split(",")  
 
 
     # Get Pick JSON data from static file
