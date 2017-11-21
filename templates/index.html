@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
+        {% extends "gtm.html" %}
+        {% block content %}
         <title>Juan Lucas</title>
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     </head>
@@ -65,4 +66,5 @@
           </div>
           </div>
     </body>
+    {% endblock %}
 </html>

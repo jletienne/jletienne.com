@@ -1,0 +1,1780 @@
+{
+   "1": {
+      "Round": 1,
+      "Points": 5485,
+      "Lower": 5211,
+      "Upper": 6033,
+      "Value": 1
+   },
+   "2": {
+      "Round": 1,
+      "Points": 5394,
+      "Lower": 5125,
+      "Upper": 5934,
+      "Value": 0.98
+   },
+   "3": {
+      "Round": 1,
+      "Points": 5305,
+      "Lower": 5039,
+      "Upper": 5835,
+      "Value": 0.97
+   },
+   "4": {
+      "Round": 1,
+      "Points": 5216,
+      "Lower": 4955,
+      "Upper": 5737,
+      "Value": 0.95
+   },
+   "5": {
+      "Round": 1,
+      "Points": 5127,
+      "Lower": 4871,
+      "Upper": 5640,
+      "Value": 0.93
+   },
+   "6": {
+      "Round": 1,
+      "Points": 5040,
+      "Lower": 4788,
+      "Upper": 5544,
+      "Value": 0.92
+   },
+   "7": {
+      "Round": 1,
+      "Points": 4954,
+      "Lower": 4706,
+      "Upper": 5449,
+      "Value": 0.9
+   },
+   "8": {
+      "Round": 1,
+      "Points": 4868,
+      "Lower": 4624,
+      "Upper": 5355,
+      "Value": 0.89
+   },
+   "9": {
+      "Round": 1,
+      "Points": 4783,
+      "Lower": 4544,
+      "Upper": 5261,
+      "Value": 0.87
+   },
+   "10": {
+      "Round": 1,
+      "Points": 4699,
+      "Lower": 4464,
+      "Upper": 5169,
+      "Value": 0.86
+   },
+   "11": {
+      "Round": 1,
+      "Points": 4616,
+      "Lower": 4385,
+      "Upper": 5077,
+      "Value": 0.84
+   },
+   "12": {
+      "Round": 1,
+      "Points": 4533,
+      "Lower": 4307,
+      "Upper": 4987,
+      "Value": 0.83
+   },
+   "13": {
+      "Round": 1,
+      "Points": 4452,
+      "Lower": 4229,
+      "Upper": 4897,
+      "Value": 0.81
+   },
+   "14": {
+      "Round": 1,
+      "Points": 4371,
+      "Lower": 4152,
+      "Upper": 4808,
+      "Value": 0.8
+   },
+   "15": {
+      "Round": 1,
+      "Points": 4291,
+      "Lower": 4077,
+      "Upper": 4720,
+      "Value": 0.78
+   },
+   "16": {
+      "Round": 1,
+      "Points": 4212,
+      "Lower": 4002,
+      "Upper": 4633,
+      "Value": 0.77
+   },
+   "17": {
+      "Round": 1,
+      "Points": 4134,
+      "Lower": 3927,
+      "Upper": 4547,
+      "Value": 0.75
+   },
+   "18": {
+      "Round": 1,
+      "Points": 4057,
+      "Lower": 3854,
+      "Upper": 4462,
+      "Value": 0.74
+   },
+   "19": {
+      "Round": 1,
+      "Points": 3980,
+      "Lower": 3781,
+      "Upper": 4378,
+      "Value": 0.73
+   },
+   "20": {
+      "Round": 1,
+      "Points": 3905,
+      "Lower": 3710,
+      "Upper": 4295,
+      "Value": 0.71
+   },
+   "21": {
+      "Round": 1,
+      "Points": 3830,
+      "Lower": 3639,
+      "Upper": 4213,
+      "Value": 0.7
+   },
+   "22": {
+      "Round": 1,
+      "Points": 3756,
+      "Lower": 3569,
+      "Upper": 4132,
+      "Value": 0.68
+   },
+   "23": {
+      "Round": 1,
+      "Points": 3684,
+      "Lower": 3499,
+      "Upper": 4052,
+      "Value": 0.67
+   },
+   "24": {
+      "Round": 1,
+      "Points": 3612,
+      "Lower": 3431,
+      "Upper": 3973,
+      "Value": 0.66
+   },
+   "25": {
+      "Round": 1,
+      "Points": 3540,
+      "Lower": 3363,
+      "Upper": 3895,
+      "Value": 0.65
+   },
+   "26": {
+      "Round": 1,
+      "Points": 3470,
+      "Lower": 3297,
+      "Upper": 3817,
+      "Value": 0.63
+   },
+   "27": {
+      "Round": 1,
+      "Points": 3401,
+      "Lower": 3231,
+      "Upper": 3741,
+      "Value": 0.62
+   },
+   "28": {
+      "Round": 1,
+      "Points": 3333,
+      "Lower": 3166,
+      "Upper": 3666,
+      "Value": 0.61
+   },
+   "29": {
+      "Round": 1,
+      "Points": 3265,
+      "Lower": 3102,
+      "Upper": 3592,
+      "Value": 0.6
+   },
+   "30": {
+      "Round": 1,
+      "Points": 3199,
+      "Lower": 3039,
+      "Upper": 3519,
+      "Value": 0.58
+   },
+   "31": {
+      "Round": 1,
+      "Points": 3133,
+      "Lower": 2977,
+      "Upper": 3447,
+      "Value": 0.57
+   },
+   "32": {
+      "Round": 1,
+      "Points": 3069,
+      "Lower": 2915,
+      "Upper": 3376,
+      "Value": 0.56
+   },
+   "33": {
+      "Round": 2,
+      "Points": 3005,
+      "Lower": 2855,
+      "Upper": 3305,
+      "Value": 0.55
+   },
+   "34": {
+      "Round": 2,
+      "Points": 2942,
+      "Lower": 2795,
+      "Upper": 3237,
+      "Value": 0.54
+   },
+   "35": {
+      "Round": 2,
+      "Points": 2881,
+      "Lower": 2737,
+      "Upper": 3169,
+      "Value": 0.53
+   },
+   "36": {
+      "Round": 2,
+      "Points": 2820,
+      "Lower": 2679,
+      "Upper": 3102,
+      "Value": 0.51
+   },
+   "37": {
+      "Round": 2,
+      "Points": 2760,
+      "Lower": 2622,
+      "Upper": 3036,
+      "Value": 0.5
+   },
+   "38": {
+      "Round": 2,
+      "Points": 2701,
+      "Lower": 2566,
+      "Upper": 2971,
+      "Value": 0.49
+   },
+   "39": {
+      "Round": 2,
+      "Points": 2643,
+      "Lower": 2511,
+      "Upper": 2907,
+      "Value": 0.48
+   },
+   "40": {
+      "Round": 2,
+      "Points": 2586,
+      "Lower": 2457,
+      "Upper": 2845,
+      "Value": 0.47
+   },
+   "41": {
+      "Round": 2,
+      "Points": 2530,
+      "Lower": 2403,
+      "Upper": 2783,
+      "Value": 0.46
+   },
+   "42": {
+      "Round": 2,
+      "Points": 2475,
+      "Lower": 2351,
+      "Upper": 2722,
+      "Value": 0.45
+   },
+   "43": {
+      "Round": 2,
+      "Points": 2420,
+      "Lower": 2299,
+      "Upper": 2662,
+      "Value": 0.44
+   },
+   "44": {
+      "Round": 2,
+      "Points": 2367,
+      "Lower": 2248,
+      "Upper": 2603,
+      "Value": 0.43
+   },
+   "45": {
+      "Round": 2,
+      "Points": 2314,
+      "Lower": 2198,
+      "Upper": 2545,
+      "Value": 0.42
+   },
+   "46": {
+      "Round": 2,
+      "Points": 2262,
+      "Lower": 2149,
+      "Upper": 2488,
+      "Value": 0.41
+   },
+   "47": {
+      "Round": 2,
+      "Points": 2211,
+      "Lower": 2100,
+      "Upper": 2432,
+      "Value": 0.4
+   },
+   "48": {
+      "Round": 2,
+      "Points": 2161,
+      "Lower": 2053,
+      "Upper": 2377,
+      "Value": 0.39
+   },
+   "49": {
+      "Round": 2,
+      "Points": 2111,
+      "Lower": 2006,
+      "Upper": 2322,
+      "Value": 0.38
+   },
+   "50": {
+      "Round": 2,
+      "Points": 2063,
+      "Lower": 1960,
+      "Upper": 2269,
+      "Value": 0.38
+   },
+   "51": {
+      "Round": 2,
+      "Points": 2015,
+      "Lower": 1914,
+      "Upper": 2216,
+      "Value": 0.37
+   },
+   "52": {
+      "Round": 2,
+      "Points": 1968,
+      "Lower": 1869,
+      "Upper": 2165,
+      "Value": 0.36
+   },
+   "53": {
+      "Round": 2,
+      "Points": 1921,
+      "Lower": 1825,
+      "Upper": 2114,
+      "Value": 0.35
+   },
+   "54": {
+      "Round": 2,
+      "Points": 1876,
+      "Lower": 1782,
+      "Upper": 2063,
+      "Value": 0.34
+   },
+   "55": {
+      "Round": 2,
+      "Points": 1831,
+      "Lower": 1739,
+      "Upper": 2014,
+      "Value": 0.33
+   },
+   "56": {
+      "Round": 2,
+      "Points": 1787,
+      "Lower": 1698,
+      "Upper": 1966,
+      "Value": 0.33
+   },
+   "57": {
+      "Round": 2,
+      "Points": 1744,
+      "Lower": 1656,
+      "Upper": 1918,
+      "Value": 0.32
+   },
+   "58": {
+      "Round": 2,
+      "Points": 1701,
+      "Lower": 1616,
+      "Upper": 1871,
+      "Value": 0.31
+   },
+   "59": {
+      "Round": 2,
+      "Points": 1659,
+      "Lower": 1576,
+      "Upper": 1825,
+      "Value": 0.3
+   },
+   "60": {
+      "Round": 2,
+      "Points": 1618,
+      "Lower": 1537,
+      "Upper": 1779,
+      "Value": 0.29
+   },
+   "61": {
+      "Round": 2,
+      "Points": 1577,
+      "Lower": 1498,
+      "Upper": 1735,
+      "Value": 0.29
+   },
+   "62": {
+      "Round": 2,
+      "Points": 1537,
+      "Lower": 1460,
+      "Upper": 1691,
+      "Value": 0.28
+   },
+   "63": {
+      "Round": 2,
+      "Points": 1498,
+      "Lower": 1423,
+      "Upper": 1647,
+      "Value": 0.27
+   },
+   "64": {
+      "Round": 2,
+      "Points": 1459,
+      "Lower": 1386,
+      "Upper": 1605,
+      "Value": 0.27
+   },
+   "65": {
+      "Round": 3,
+      "Points": 1421,
+      "Lower": 1350,
+      "Upper": 1564,
+      "Value": 0.26
+   },
+   "66": {
+      "Round": 3,
+      "Points": 1385,
+      "Lower": 1316,
+      "Upper": 1524,
+      "Value": 0.25
+   },
+   "67": {
+      "Round": 3,
+      "Points": 1351,
+      "Lower": 1283,
+      "Upper": 1486,
+      "Value": 0.25
+   },
+   "68": {
+      "Round": 3,
+      "Points": 1318,
+      "Lower": 1252,
+      "Upper": 1450,
+      "Value": 0.24
+   },
+   "69": {
+      "Round": 3,
+      "Points": 1286,
+      "Lower": 1222,
+      "Upper": 1415,
+      "Value": 0.23
+   },
+   "70": {
+      "Round": 3,
+      "Points": 1256,
+      "Lower": 1193,
+      "Upper": 1382,
+      "Value": 0.23
+   },
+   "71": {
+      "Round": 3,
+      "Points": 1227,
+      "Lower": 1166,
+      "Upper": 1350,
+      "Value": 0.22
+   },
+   "72": {
+      "Round": 3,
+      "Points": 1199,
+      "Lower": 1139,
+      "Upper": 1319,
+      "Value": 0.22
+   },
+   "73": {
+      "Round": 3,
+      "Points": 1173,
+      "Lower": 1114,
+      "Upper": 1290,
+      "Value": 0.21
+   },
+   "74": {
+      "Round": 3,
+      "Points": 1148,
+      "Lower": 1090,
+      "Upper": 1262,
+      "Value": 0.21
+   },
+   "75": {
+      "Round": 3,
+      "Points": 1123,
+      "Lower": 1067,
+      "Upper": 1236,
+      "Value": 0.2
+   },
+   "76": {
+      "Round": 3,
+      "Points": 1100,
+      "Lower": 1045,
+      "Upper": 1210,
+      "Value": 0.2
+   },
+   "77": {
+      "Round": 3,
+      "Points": 1078,
+      "Lower": 1024,
+      "Upper": 1185,
+      "Value": 0.2
+   },
+   "78": {
+      "Round": 3,
+      "Points": 1056,
+      "Lower": 1003,
+      "Upper": 1162,
+      "Value": 0.19
+   },
+   "79": {
+      "Round": 3,
+      "Points": 1036,
+      "Lower": 984,
+      "Upper": 1139,
+      "Value": 0.19
+   },
+   "80": {
+      "Round": 3,
+      "Points": 1016,
+      "Lower": 965,
+      "Upper": 1117,
+      "Value": 0.19
+   },
+   "81": {
+      "Round": 3,
+      "Points": 997,
+      "Lower": 947,
+      "Upper": 1096,
+      "Value": 0.18
+   },
+   "82": {
+      "Round": 3,
+      "Points": 978,
+      "Lower": 929,
+      "Upper": 1076,
+      "Value": 0.18
+   },
+   "83": {
+      "Round": 3,
+      "Points": 961,
+      "Lower": 912,
+      "Upper": 1057,
+      "Value": 0.18
+   },
+   "84": {
+      "Round": 3,
+      "Points": 943,
+      "Lower": 896,
+      "Upper": 1038,
+      "Value": 0.17
+   },
+   "85": {
+      "Round": 3,
+      "Points": 927,
+      "Lower": 880,
+      "Upper": 1019,
+      "Value": 0.17
+   },
+   "86": {
+      "Round": 3,
+      "Points": 910,
+      "Lower": 865,
+      "Upper": 1001,
+      "Value": 0.17
+   },
+   "87": {
+      "Round": 3,
+      "Points": 895,
+      "Lower": 850,
+      "Upper": 984,
+      "Value": 0.16
+   },
+   "88": {
+      "Round": 3,
+      "Points": 879,
+      "Lower": 835,
+      "Upper": 967,
+      "Value": 0.16
+   },
+   "89": {
+      "Round": 3,
+      "Points": 864,
+      "Lower": 821,
+      "Upper": 950,
+      "Value": 0.16
+   },
+   "90": {
+      "Round": 3,
+      "Points": 849,
+      "Lower": 806,
+      "Upper": 934,
+      "Value": 0.15
+   },
+   "91": {
+      "Round": 3,
+      "Points": 834,
+      "Lower": 792,
+      "Upper": 917,
+      "Value": 0.15
+   },
+   "92": {
+      "Round": 3,
+      "Points": 819,
+      "Lower": 778,
+      "Upper": 901,
+      "Value": 0.15
+   },
+   "93": {
+      "Round": 3,
+      "Points": 805,
+      "Lower": 764,
+      "Upper": 885,
+      "Value": 0.15
+   },
+   "94": {
+      "Round": 3,
+      "Points": 790,
+      "Lower": 750,
+      "Upper": 869,
+      "Value": 0.14
+   },
+   "95": {
+      "Round": 3,
+      "Points": 775,
+      "Lower": 736,
+      "Upper": 853,
+      "Value": 0.14
+   },
+   "96": {
+      "Round": 3,
+      "Points": 760,
+      "Lower": 722,
+      "Upper": 836,
+      "Value": 0.14
+   },
+   "97": {
+      "Round": 3,
+      "Points": 746,
+      "Lower": 709,
+      "Upper": 821,
+      "Value": 0.14
+   },
+   "98": {
+      "Round": 3,
+      "Points": 734,
+      "Lower": 697,
+      "Upper": 807,
+      "Value": 0.13
+   },
+   "99": {
+      "Round": 3,
+      "Points": 722,
+      "Lower": 686,
+      "Upper": 794,
+      "Value": 0.13
+   },
+   "100": {
+      "Round": 4,
+      "Points": 712,
+      "Lower": 677,
+      "Upper": 783,
+      "Value": 0.13
+   },
+   "101": {
+      "Round": 4,
+      "Points": 703,
+      "Lower": 668,
+      "Upper": 774,
+      "Value": 0.13
+   },
+   "102": {
+      "Round": 4,
+      "Points": 696,
+      "Lower": 661,
+      "Upper": 765,
+      "Value": 0.13
+   },
+   "103": {
+      "Round": 4,
+      "Points": 689,
+      "Lower": 655,
+      "Upper": 758,
+      "Value": 0.13
+   },
+   "104": {
+      "Round": 4,
+      "Points": 683,
+      "Lower": 649,
+      "Upper": 752,
+      "Value": 0.12
+   },
+   "105": {
+      "Round": 4,
+      "Points": 679,
+      "Lower": 645,
+      "Upper": 746,
+      "Value": 0.12
+   },
+   "106": {
+      "Round": 4,
+      "Points": 675,
+      "Lower": 641,
+      "Upper": 742,
+      "Value": 0.12
+   },
+   "107": {
+      "Round": 4,
+      "Points": 671,
+      "Lower": 638,
+      "Upper": 739,
+      "Value": 0.12
+   },
+   "108": {
+      "Round": 4,
+      "Points": 669,
+      "Lower": 635,
+      "Upper": 736,
+      "Value": 0.12
+   },
+   "109": {
+      "Round": 4,
+      "Points": 667,
+      "Lower": 633,
+      "Upper": 733,
+      "Value": 0.12
+   },
+   "110": {
+      "Round": 4,
+      "Points": 665,
+      "Lower": 632,
+      "Upper": 732,
+      "Value": 0.12
+   },
+   "111": {
+      "Round": 4,
+      "Points": 664,
+      "Lower": 631,
+      "Upper": 730,
+      "Value": 0.12
+   },
+   "112": {
+      "Round": 4,
+      "Points": 663,
+      "Lower": 630,
+      "Upper": 730,
+      "Value": 0.12
+   },
+   "113": {
+      "Round": 4,
+      "Points": 663,
+      "Lower": 630,
+      "Upper": 729,
+      "Value": 0.12
+   },
+   "114": {
+      "Round": 4,
+      "Points": 662,
+      "Lower": 629,
+      "Upper": 729,
+      "Value": 0.12
+   },
+   "115": {
+      "Round": 4,
+      "Points": 662,
+      "Lower": 629,
+      "Upper": 728,
+      "Value": 0.12
+   },
+   "116": {
+      "Round": 4,
+      "Points": 662,
+      "Lower": 629,
+      "Upper": 728,
+      "Value": 0.12
+   },
+   "117": {
+      "Round": 4,
+      "Points": 662,
+      "Lower": 628,
+      "Upper": 728,
+      "Value": 0.12
+   },
+   "118": {
+      "Round": 4,
+      "Points": 661,
+      "Lower": 628,
+      "Upper": 727,
+      "Value": 0.12
+   },
+   "119": {
+      "Round": 4,
+      "Points": 660,
+      "Lower": 627,
+      "Upper": 726,
+      "Value": 0.12
+   },
+   "120": {
+      "Round": 4,
+      "Points": 659,
+      "Lower": 626,
+      "Upper": 725,
+      "Value": 0.12
+   },
+   "121": {
+      "Round": 4,
+      "Points": 658,
+      "Lower": 625,
+      "Upper": 724,
+      "Value": 0.12
+   },
+   "122": {
+      "Round": 4,
+      "Points": 656,
+      "Lower": 623,
+      "Upper": 722,
+      "Value": 0.12
+   },
+   "123": {
+      "Round": 4,
+      "Points": 654,
+      "Lower": 621,
+      "Upper": 719,
+      "Value": 0.12
+   },
+   "124": {
+      "Round": 4,
+      "Points": 651,
+      "Lower": 618,
+      "Upper": 716,
+      "Value": 0.12
+   },
+   "125": {
+      "Round": 4,
+      "Points": 647,
+      "Lower": 615,
+      "Upper": 712,
+      "Value": 0.12
+   },
+   "126": {
+      "Round": 4,
+      "Points": 642,
+      "Lower": 610,
+      "Upper": 707,
+      "Value": 0.12
+   },
+   "127": {
+      "Round": 4,
+      "Points": 637,
+      "Lower": 605,
+      "Upper": 701,
+      "Value": 0.12
+   },
+   "128": {
+      "Round": 4,
+      "Points": 631,
+      "Lower": 600,
+      "Upper": 694,
+      "Value": 0.12
+   },
+   "129": {
+      "Round": 4,
+      "Points": 626,
+      "Lower": 595,
+      "Upper": 689,
+      "Value": 0.11
+   },
+   "130": {
+      "Round": 4,
+      "Points": 621,
+      "Lower": 590,
+      "Upper": 683,
+      "Value": 0.11
+   },
+   "131": {
+      "Round": 4,
+      "Points": 617,
+      "Lower": 586,
+      "Upper": 678,
+      "Value": 0.11
+   },
+   "132": {
+      "Round": 4,
+      "Points": 612,
+      "Lower": 582,
+      "Upper": 674,
+      "Value": 0.11
+   },
+   "133": {
+      "Round": 4,
+      "Points": 608,
+      "Lower": 578,
+      "Upper": 669,
+      "Value": 0.11
+   },
+   "134": {
+      "Round": 4,
+      "Points": 605,
+      "Lower": 574,
+      "Upper": 665,
+      "Value": 0.11
+   },
+   "135": {
+      "Round": 4,
+      "Points": 601,
+      "Lower": 571,
+      "Upper": 661,
+      "Value": 0.11
+   },
+   "136": {
+      "Round": 4,
+      "Points": 598,
+      "Lower": 568,
+      "Upper": 658,
+      "Value": 0.11
+   },
+   "137": {
+      "Round": 4,
+      "Points": 595,
+      "Lower": 565,
+      "Upper": 654,
+      "Value": 0.11
+   },
+   "138": {
+      "Round": 4,
+      "Points": 592,
+      "Lower": 563,
+      "Upper": 651,
+      "Value": 0.11
+   },
+   "139": {
+      "Round": 4,
+      "Points": 589,
+      "Lower": 560,
+      "Upper": 648,
+      "Value": 0.11
+   },
+   "140": {
+      "Round": 4,
+      "Points": 587,
+      "Lower": 558,
+      "Upper": 646,
+      "Value": 0.11
+   },
+   "141": {
+      "Round": 5,
+      "Points": 585,
+      "Lower": 555,
+      "Upper": 643,
+      "Value": 0.11
+   },
+   "142": {
+      "Round": 5,
+      "Points": 582,
+      "Lower": 553,
+      "Upper": 640,
+      "Value": 0.11
+   },
+   "143": {
+      "Round": 5,
+      "Points": 580,
+      "Lower": 551,
+      "Upper": 638,
+      "Value": 0.11
+   },
+   "144": {
+      "Round": 5,
+      "Points": 578,
+      "Lower": 549,
+      "Upper": 635,
+      "Value": 0.11
+   },
+   "145": {
+      "Round": 5,
+      "Points": 576,
+      "Lower": 547,
+      "Upper": 633,
+      "Value": 0.1
+   },
+   "146": {
+      "Round": 5,
+      "Points": 573,
+      "Lower": 545,
+      "Upper": 631,
+      "Value": 0.1
+   },
+   "147": {
+      "Round": 5,
+      "Points": 571,
+      "Lower": 543,
+      "Upper": 628,
+      "Value": 0.1
+   },
+   "148": {
+      "Round": 5,
+      "Points": 569,
+      "Lower": 540,
+      "Upper": 626,
+      "Value": 0.1
+   },
+   "149": {
+      "Round": 5,
+      "Points": 567,
+      "Lower": 538,
+      "Upper": 623,
+      "Value": 0.1
+   },
+   "150": {
+      "Round": 5,
+      "Points": 564,
+      "Lower": 536,
+      "Upper": 621,
+      "Value": 0.1
+   },
+   "151": {
+      "Round": 5,
+      "Points": 562,
+      "Lower": 534,
+      "Upper": 618,
+      "Value": 0.1
+   },
+   "152": {
+      "Round": 5,
+      "Points": 559,
+      "Lower": 531,
+      "Upper": 615,
+      "Value": 0.1
+   },
+   "153": {
+      "Round": 5,
+      "Points": 556,
+      "Lower": 528,
+      "Upper": 612,
+      "Value": 0.1
+   },
+   "154": {
+      "Round": 5,
+      "Points": 553,
+      "Lower": 526,
+      "Upper": 609,
+      "Value": 0.1
+   },
+   "155": {
+      "Round": 5,
+      "Points": 550,
+      "Lower": 523,
+      "Upper": 605,
+      "Value": 0.1
+   },
+   "156": {
+      "Round": 5,
+      "Points": 547,
+      "Lower": 519,
+      "Upper": 601,
+      "Value": 0.1
+   },
+   "157": {
+      "Round": 5,
+      "Points": 543,
+      "Lower": 516,
+      "Upper": 597,
+      "Value": 0.1
+   },
+   "158": {
+      "Round": 5,
+      "Points": 539,
+      "Lower": 512,
+      "Upper": 593,
+      "Value": 0.1
+   },
+   "159": {
+      "Round": 5,
+      "Points": 535,
+      "Lower": 508,
+      "Upper": 588,
+      "Value": 0.1
+   },
+   "160": {
+      "Round": 5,
+      "Points": 531,
+      "Lower": 504,
+      "Upper": 584,
+      "Value": 0.1
+   },
+   "161": {
+      "Round": 5,
+      "Points": 526,
+      "Lower": 500,
+      "Upper": 579,
+      "Value": 0.1
+   },
+   "162": {
+      "Round": 5,
+      "Points": 522,
+      "Lower": 496,
+      "Upper": 574,
+      "Value": 0.1
+   },
+   "163": {
+      "Round": 5,
+      "Points": 518,
+      "Lower": 492,
+      "Upper": 570,
+      "Value": 0.09
+   },
+   "164": {
+      "Round": 5,
+      "Points": 514,
+      "Lower": 488,
+      "Upper": 565,
+      "Value": 0.09
+   },
+   "165": {
+      "Round": 5,
+      "Points": 510,
+      "Lower": 484,
+      "Upper": 561,
+      "Value": 0.09
+   },
+   "166": {
+      "Round": 5,
+      "Points": 506,
+      "Lower": 480,
+      "Upper": 556,
+      "Value": 0.09
+   },
+   "167": {
+      "Round": 5,
+      "Points": 502,
+      "Lower": 476,
+      "Upper": 552,
+      "Value": 0.09
+   },
+   "168": {
+      "Round": 5,
+      "Points": 498,
+      "Lower": 473,
+      "Upper": 547,
+      "Value": 0.09
+   },
+   "169": {
+      "Round": 5,
+      "Points": 493,
+      "Lower": 469,
+      "Upper": 543,
+      "Value": 0.09
+   },
+   "170": {
+      "Round": 5,
+      "Points": 489,
+      "Lower": 465,
+      "Upper": 538,
+      "Value": 0.09
+   },
+   "171": {
+      "Round": 5,
+      "Points": 485,
+      "Lower": 461,
+      "Upper": 534,
+      "Value": 0.09
+   },
+   "172": {
+      "Round": 5,
+      "Points": 481,
+      "Lower": 457,
+      "Upper": 530,
+      "Value": 0.09
+   },
+   "173": {
+      "Round": 5,
+      "Points": 477,
+      "Lower": 454,
+      "Upper": 525,
+      "Value": 0.09
+   },
+   "174": {
+      "Round": 5,
+      "Points": 473,
+      "Lower": 450,
+      "Upper": 521,
+      "Value": 0.09
+   },
+   "175": {
+      "Round": 5,
+      "Points": 469,
+      "Lower": 446,
+      "Upper": 516,
+      "Value": 0.09
+   },
+   "176": {
+      "Round": 5,
+      "Points": 465,
+      "Lower": 442,
+      "Upper": 512,
+      "Value": 0.08
+   },
+   "177": {
+      "Round": 6,
+      "Points": 461,
+      "Lower": 438,
+      "Upper": 508,
+      "Value": 0.08
+   },
+   "178": {
+      "Round": 6,
+      "Points": 457,
+      "Lower": 435,
+      "Upper": 503,
+      "Value": 0.08
+   },
+   "179": {
+      "Round": 6,
+      "Points": 453,
+      "Lower": 431,
+      "Upper": 499,
+      "Value": 0.08
+   },
+   "180": {
+      "Round": 6,
+      "Points": 449,
+      "Lower": 427,
+      "Upper": 494,
+      "Value": 0.08
+   },
+   "181": {
+      "Round": 6,
+      "Points": 445,
+      "Lower": 423,
+      "Upper": 490,
+      "Value": 0.08
+   },
+   "182": {
+      "Round": 6,
+      "Points": 441,
+      "Lower": 419,
+      "Upper": 485,
+      "Value": 0.08
+   },
+   "183": {
+      "Round": 6,
+      "Points": 437,
+      "Lower": 415,
+      "Upper": 481,
+      "Value": 0.08
+   },
+   "184": {
+      "Round": 6,
+      "Points": 433,
+      "Lower": 411,
+      "Upper": 476,
+      "Value": 0.08
+   },
+   "185": {
+      "Round": 6,
+      "Points": 428,
+      "Lower": 407,
+      "Upper": 471,
+      "Value": 0.08
+   },
+   "186": {
+      "Round": 6,
+      "Points": 424,
+      "Lower": 403,
+      "Upper": 466,
+      "Value": 0.08
+   },
+   "187": {
+      "Round": 6,
+      "Points": 420,
+      "Lower": 399,
+      "Upper": 462,
+      "Value": 0.08
+   },
+   "188": {
+      "Round": 6,
+      "Points": 415,
+      "Lower": 394,
+      "Upper": 457,
+      "Value": 0.08
+   },
+   "189": {
+      "Round": 6,
+      "Points": 411,
+      "Lower": 390,
+      "Upper": 452,
+      "Value": 0.07
+   },
+   "190": {
+      "Round": 6,
+      "Points": 406,
+      "Lower": 386,
+      "Upper": 447,
+      "Value": 0.07
+   },
+   "191": {
+      "Round": 6,
+      "Points": 402,
+      "Lower": 382,
+      "Upper": 442,
+      "Value": 0.07
+   },
+   "192": {
+      "Round": 6,
+      "Points": 397,
+      "Lower": 377,
+      "Upper": 437,
+      "Value": 0.07
+   },
+   "193": {
+      "Round": 6,
+      "Points": 392,
+      "Lower": 373,
+      "Upper": 432,
+      "Value": 0.07
+   },
+   "194": {
+      "Round": 6,
+      "Points": 388,
+      "Lower": 368,
+      "Upper": 426,
+      "Value": 0.07
+   },
+   "195": {
+      "Round": 6,
+      "Points": 383,
+      "Lower": 364,
+      "Upper": 421,
+      "Value": 0.07
+   },
+   "196": {
+      "Round": 6,
+      "Points": 378,
+      "Lower": 359,
+      "Upper": 416,
+      "Value": 0.07
+   },
+   "197": {
+      "Round": 6,
+      "Points": 374,
+      "Lower": 355,
+      "Upper": 411,
+      "Value": 0.07
+   },
+   "198": {
+      "Round": 6,
+      "Points": 369,
+      "Lower": 351,
+      "Upper": 406,
+      "Value": 0.07
+   },
+   "199": {
+      "Round": 6,
+      "Points": 364,
+      "Lower": 346,
+      "Upper": 401,
+      "Value": 0.07
+   },
+   "200": {
+      "Round": 6,
+      "Points": 360,
+      "Lower": 342,
+      "Upper": 396,
+      "Value": 0.07
+   },
+   "201": {
+      "Round": 6,
+      "Points": 355,
+      "Lower": 337,
+      "Upper": 390,
+      "Value": 0.06
+   },
+   "202": {
+      "Round": 6,
+      "Points": 350,
+      "Lower": 333,
+      "Upper": 385,
+      "Value": 0.06
+   },
+   "203": {
+      "Round": 6,
+      "Points": 345,
+      "Lower": 328,
+      "Upper": 380,
+      "Value": 0.06
+   },
+   "204": {
+      "Round": 6,
+      "Points": 341,
+      "Lower": 324,
+      "Upper": 375,
+      "Value": 0.06
+   },
+   "205": {
+      "Round": 6,
+      "Points": 336,
+      "Lower": 319,
+      "Upper": 370,
+      "Value": 0.06
+   },
+   "206": {
+      "Round": 6,
+      "Points": 331,
+      "Lower": 315,
+      "Upper": 364,
+      "Value": 0.06
+   },
+   "207": {
+      "Round": 6,
+      "Points": 326,
+      "Lower": 310,
+      "Upper": 359,
+      "Value": 0.06
+   },
+   "208": {
+      "Round": 6,
+      "Points": 322,
+      "Lower": 305,
+      "Upper": 354,
+      "Value": 0.06
+   },
+   "209": {
+      "Round": 6,
+      "Points": 317,
+      "Lower": 301,
+      "Upper": 348,
+      "Value": 0.06
+   },
+   "210": {
+      "Round": 6,
+      "Points": 312,
+      "Lower": 296,
+      "Upper": 343,
+      "Value": 0.06
+   },
+   "211": {
+      "Round": 6,
+      "Points": 307,
+      "Lower": 292,
+      "Upper": 338,
+      "Value": 0.06
+   },
+   "212": {
+      "Round": 6,
+      "Points": 302,
+      "Lower": 287,
+      "Upper": 332,
+      "Value": 0.06
+   },
+   "213": {
+      "Round": 6,
+      "Points": 297,
+      "Lower": 282,
+      "Upper": 327,
+      "Value": 0.05
+   },
+   "214": {
+      "Round": 6,
+      "Points": 292,
+      "Lower": 278,
+      "Upper": 322,
+      "Value": 0.05
+   },
+   "215": {
+      "Round": 6,
+      "Points": 287,
+      "Lower": 273,
+      "Upper": 316,
+      "Value": 0.05
+   },
+   "216": {
+      "Round": 6,
+      "Points": 283,
+      "Lower": 268,
+      "Upper": 311,
+      "Value": 0.05
+   },
+   "217": {
+      "Round": 6,
+      "Points": 278,
+      "Lower": 264,
+      "Upper": 305,
+      "Value": 0.05
+   },
+   "218": {
+      "Round": 6,
+      "Points": 273,
+      "Lower": 259,
+      "Upper": 300,
+      "Value": 0.05
+   },
+   "219": {
+      "Round": 6,
+      "Points": 268,
+      "Lower": 254,
+      "Upper": 294,
+      "Value": 0.05
+   },
+   "220": {
+      "Round": 6,
+      "Points": 263,
+      "Lower": 249,
+      "Upper": 289,
+      "Value": 0.05
+   },
+   "221": {
+      "Round": 6,
+      "Points": 258,
+      "Lower": 245,
+      "Upper": 283,
+      "Value": 0.05
+   },
+   "222": {
+      "Round": 6,
+      "Points": 252,
+      "Lower": 240,
+      "Upper": 278,
+      "Value": 0.05
+   },
+   "223": {
+      "Round": 7,
+      "Points": 247,
+      "Lower": 235,
+      "Upper": 272,
+      "Value": 0.05
+   },
+   "224": {
+      "Round": 7,
+      "Points": 242,
+      "Lower": 230,
+      "Upper": 266,
+      "Value": 0.04
+   },
+   "225": {
+      "Round": 7,
+      "Points": 237,
+      "Lower": 225,
+      "Upper": 261,
+      "Value": 0.04
+   },
+   "226": {
+      "Round": 7,
+      "Points": 232,
+      "Lower": 220,
+      "Upper": 255,
+      "Value": 0.04
+   },
+   "227": {
+      "Round": 7,
+      "Points": 227,
+      "Lower": 215,
+      "Upper": 249,
+      "Value": 0.04
+   },
+   "228": {
+      "Round": 7,
+      "Points": 222,
+      "Lower": 210,
+      "Upper": 244,
+      "Value": 0.04
+   },
+   "229": {
+      "Round": 7,
+      "Points": 216,
+      "Lower": 205,
+      "Upper": 238,
+      "Value": 0.04
+   },
+   "230": {
+      "Round": 7,
+      "Points": 211,
+      "Lower": 200,
+      "Upper": 232,
+      "Value": 0.04
+   },
+   "231": {
+      "Round": 7,
+      "Points": 206,
+      "Lower": 195,
+      "Upper": 226,
+      "Value": 0.04
+   },
+   "232": {
+      "Round": 7,
+      "Points": 200,
+      "Lower": 190,
+      "Upper": 220,
+      "Value": 0.04
+   },
+   "233": {
+      "Round": 7,
+      "Points": 195,
+      "Lower": 185,
+      "Upper": 215,
+      "Value": 0.04
+   },
+   "234": {
+      "Round": 7,
+      "Points": 190,
+      "Lower": 180,
+      "Upper": 209,
+      "Value": 0.03
+   },
+   "235": {
+      "Round": 7,
+      "Points": 184,
+      "Lower": 175,
+      "Upper": 203,
+      "Value": 0.03
+   },
+   "236": {
+      "Round": 7,
+      "Points": 179,
+      "Lower": 170,
+      "Upper": 197,
+      "Value": 0.03
+   },
+   "237": {
+      "Round": 7,
+      "Points": 174,
+      "Lower": 165,
+      "Upper": 191,
+      "Value": 0.03
+   },
+   "238": {
+      "Round": 7,
+      "Points": 168,
+      "Lower": 160,
+      "Upper": 185,
+      "Value": 0.03
+   },
+   "239": {
+      "Round": 7,
+      "Points": 163,
+      "Lower": 155,
+      "Upper": 179,
+      "Value": 0.03
+   },
+   "240": {
+      "Round": 7,
+      "Points": 157,
+      "Lower": 149,
+      "Upper": 173,
+      "Value": 0.03
+   },
+   "241": {
+      "Round": 7,
+      "Points": 152,
+      "Lower": 144,
+      "Upper": 167,
+      "Value": 0.03
+   },
+   "242": {
+      "Round": 7,
+      "Points": 146,
+      "Lower": 139,
+      "Upper": 161,
+      "Value": 0.03
+   },
+   "243": {
+      "Round": 7,
+      "Points": 141,
+      "Lower": 134,
+      "Upper": 155,
+      "Value": 0.03
+   },
+   "244": {
+      "Round": 7,
+      "Points": 135,
+      "Lower": 128,
+      "Upper": 149,
+      "Value": 0.02
+   },
+   "245": {
+      "Round": 7,
+      "Points": 130,
+      "Lower": 123,
+      "Upper": 143,
+      "Value": 0.02
+   },
+   "246": {
+      "Round": 7,
+      "Points": 124,
+      "Lower": 118,
+      "Upper": 136,
+      "Value": 0.02
+   },
+   "247": {
+      "Round": 7,
+      "Points": 118,
+      "Lower": 113,
+      "Upper": 130,
+      "Value": 0.02
+   },
+   "248": {
+      "Round": 7,
+      "Points": 113,
+      "Lower": 107,
+      "Upper": 124,
+      "Value": 0.02
+   },
+   "249": {
+      "Round": 7,
+      "Points": 107,
+      "Lower": 102,
+      "Upper": 118,
+      "Value": 0.02
+   },
+   "250": {
+      "Round": 7,
+      "Points": 102,
+      "Lower": 96,
+      "Upper": 112,
+      "Value": 0.02
+   },
+   "251": {
+      "Round": 7,
+      "Points": 96,
+      "Lower": 91,
+      "Upper": 105,
+      "Value": 0.02
+   },
+   "252": {
+      "Round": 7,
+      "Points": 90,
+      "Lower": 86,
+      "Upper": 99,
+      "Value": 0.02
+   },
+   "253": {
+      "Round": 7,
+      "Points": 84,
+      "Lower": 80,
+      "Upper": 93,
+      "Value": 0.02
+   },
+   "254": {
+      "Round": 7,
+      "Points": 79,
+      "Lower": 75,
+      "Upper": 87,
+      "Value": 0.01
+   }
+}

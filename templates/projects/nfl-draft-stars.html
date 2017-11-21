@@ -1,5 +1,7 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 
 
 <title> NFL Stars </title>
@@ -41,6 +43,7 @@
 <p> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </p>
 <p> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </p>
 
+<div class ="container; vcenter" style="text-align:center;">
 <table>
       <tr>
         <td><h2> Picks In </h2></td>
@@ -60,41 +63,44 @@
     </tr>
 {% endfor %}
  </table>
+</div>
 
 
+<div style="text-align:center;margin-right:auto;margin-left:auto">
+    <table style="width:100%" align="center">
+      <tr>
+        <td><h5><label for="incoming_picks">Picks In</label></h5></td>
+        <td><h5><label for="out_going_picks">Picks Out</label></h5></td>
+      </tr>
+      <tr>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_1" value= "1" /></td>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_1" value= "4" /></td>
+      </tr>
+      <tr>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_2" value= "2" /></td>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_2" value= "5" /></td>
+      </tr>
+      <tr>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_3" value= "3" /></td>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_3" value= "" /></td>
+      </tr>
+      <tr>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_4" value= "" /></td>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_4" value= "" /></td>
+      </tr>
+      <tr>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_5" value= "" /></td>
+        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_5" value= "" /></td>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+    <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+  </form>
+</div>
 
- <div style="text-align:center;">
-     <table style="width:100%" align="center">
-       <tr>
-         <td><h5><label for="incoming_picks">Picks In</label></h5></td>
-         <td><h5><label for="out_going_picks">Picks Out</label></h5></td>
-       </tr>
-       <tr>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_1" value= "1" /></td>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_1" value= "4" /></td>
-       </tr>
-       <tr>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_2" value= "2" /></td>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_2" value= "5" /></td>
-       </tr>
-       <tr>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_3" value= "3" /></td>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_3" value= "" /></td>
-       </tr>
-       <tr>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_4" value= "" /></td>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_4" value= "" /></td>
-       </tr>
-       <tr>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_in_5" value= "" /></td>
-         <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="pick_out_5" value= "" /></td>
-       </tr>
-     </table>
-     <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
-   </form>
- </div>
+</html>
 
-{% endblock %}
 
 <!--
 <title> {{pageInfo}} </title>

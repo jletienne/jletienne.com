@@ -5,6 +5,7 @@ from cool_projects.apple import *
 from cool_projects.cassel import *
 from cool_projects.chomba import *
 from cool_projects.roundup import *
+from cool_projects.nfl_draft import *
 
 
 app = Flask(__name__)
@@ -52,75 +53,19 @@ def shoppin():
 def apple():
     return render_template('projects/apple.html', apple=applebot())
 
-@app.route('/casselz')
-@app.route('/cassel-z')
-def casselz():
-    return render_template('projects/cassel-z.html', cassel=cassel(), cassel2=cassel2())
-
-@app.route('/chombas')
-@app.route('/chupacabras')
-def chombas():
-    date = getNextEvent(team='Chupacabras')
-    return render_template('teams/chombas.html', eventInfo=eventInfo(team='Chupacabras', date=date), teamInfo=teamInfo('Chupacabras'))
-
-@app.route('/cha-ching')
-@app.route('/chaching')
-def chaching():
-    date = getNextEvent(team='Cha-Ching')
-    return render_template('teams/cha-ching.html', eventInfo=eventInfo(team='Cha-Ching', date=date), teamInfo=teamInfo('Cha-Ching'))
 
 
-@app.route('/orange')
-def orange():
-    date = getNextEvent(team='Orange')
-    return render_template('teams/orange.html', eventInfo=eventInfo(team='Orange', date=date), teamInfo=teamInfo('Orange'))
+@app.route('/teams/<team>')
+def teams(team):
+    date = getNextEvent(team=team.title())
+    return render_template('teams/{}.html'.format(team), eventInfo=eventInfo(team=team.title(), date=date), teamInfo=teamInfo(team.title()))
 
-@app.route('/black')
-def black():
-    date = getNextEvent(team='Black')
-    return render_template('teams/black.html', eventInfo=eventInfo(team='Black', date=date), teamInfo=teamInfo('Black'))
-
-@app.route('/dreamteam')
-@app.route('/dream')
-def dream():
-    date = getNextEvent(team='Dream')
-    return render_template('teams/dream.html', eventInfo=eventInfo(team='Dream', date=date), teamInfo=teamInfo('Dream'))
-
-@app.route('/trout')
-def trout():
-    date = getNextEvent(team='Trout')
-    return render_template('teams/trout.html', eventInfo=eventInfo(team='Trout', date=date), teamInfo=teamInfo('Trout'))
-
-@app.route('/hardhats')
-def hardhats():
-    date = getNextEvent(team='Hardhats')
-    return render_template('teams/hardhats.html', eventInfo=eventInfo(team='Hardhats', date=date), teamInfo=teamInfo('Hardhats'))
-
-@app.route('/purple')
-def purple():
-    date = getNextEvent(team='Purple')
-    return render_template('teams/purple.html', eventInfo=eventInfo(team='Purple', date=date), teamInfo=teamInfo('Purple'))
-
-
-@app.route('/hits')
-@app.route('/hitthis')
-def hitthis():
-    date = getNextEvent(team='Hit_This')
-    return render_template('teams/hits.html', eventInfo=eventInfo(team='Hit_This', date=date), teamInfo=teamInfo('Hit_This'))
-
-
-@app.route('/teams')
-def teams():
-    incrementTrip(team='Teams')
-    return render_template('teams/zteams.html', teams = getTeams())
-
-@app.route('/jl')
-def jl():
-    #date = getNextEvent(player='JL')
-    return render_template('players/jl.html', eventInfo = aggregate('JL'), playerInfo= getPlayerName('JL'))
+@app.route('/nfl-draft-stars')
+def nfl():
+    return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft())
 
 
 
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     app.run()

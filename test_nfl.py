@@ -126,7 +126,7 @@ def nfl_draft():
     def get_points(picks,data):
        return [data[str(pick)]['Points']/10000 for pick in picks]
 
-    # Data we use from get_picks9)
+    # Data we use from get_picks())
     data = get_picks()
 
     # Value picks from binomial cdf
