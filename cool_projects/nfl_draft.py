@@ -6,8 +6,8 @@ import re
 from decimal import *
 
 #from scipy.stats import binom, norm
-import matplotlib.pyplot as plt
-import numpy as np
+#import matplotlib.pyplot as plt
+#import numpy as np
 
 
 def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
