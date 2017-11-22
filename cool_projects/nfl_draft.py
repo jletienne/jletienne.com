@@ -9,6 +9,9 @@ from decimal import *
 #import matplotlib.pyplot as plt
 #import numpy as np
 
+#heroku config:set BUILDPACK_URL=https://github.com/arose13/conda-buildpack.git
+
+
 
 def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
     posts = [  # fake array of posts
