@@ -1,14 +1,22 @@
 <html>
   <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5DK735S');</script>
+    <!-- End Google Tag Manager -->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     {% if title %}
-    <title>{{ title }} - microblog</title>
+    <title>{{ title }} - Jean-Luc Etienne </title>
     {% else %}
-    <title>Welcome to microblog</title>
+    <title>Welcome to Jean-Luc Etienne</title>
     {% endif %}
   </head>
   <body>
-    <div>Microblog: <a href="/index">Home</a></div>
-
-
+    <div>Home: <a href="/">Home</a></div>
+    <hr>
+    {% block content %}{% endblock %}
   </body>
 </html>

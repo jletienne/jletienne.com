@@ -1,87 +1,57 @@
 <!DOCTYPE html>
-<html>
+  <html>
 
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <head>
+        {% include "gtm.html" %}
+        <title> NFL Stars </title>
+        <h1> NFL Stars </h1>
+    </head>
 
+      <body>
+        <p> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </p>
+        <p> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </p>
 
-<title> NFL Stars </title>
-<h1> NFL Stars </h1>
-
-<!--
-<div class ="container; vcenter" style="text-align:center; height: 50vh">
-  <div style="display:block;text-align:center;margin-right:auto;margin-left:auto">
-    <table border="0" bordercolor="#000" cellspacing="0" style="width: 100%" align="center">
-<tbody>
-  <tr s>
-    <td style="width:50%">
-      <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href=""><img border="0"></div>
-      <h3> Incoming Picks </h3>
-    </td>
-    <td style="width:50%">
-      <div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><a href=""><img border="0"></div>
-      <h3> Outgoing Picks </h3>
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-</div>
--->
-<!--
-<form name=incoming>
-{% for post in pageInfo['picks_in'] %}
-<div>  <input type="text" value = {{ post.Pick }}> <p>{{ post.Pick }} says: <b>{{ post.Pick_Number }}</b></p></div>
-{% endfor %}
-</form>
-
-
-{{pageInfo.picks_in}}
-{{pageInfo.picks_out}}
-{{pageInfo.trade}}
--->
-
-<p> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </p>
-<p> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </p>
-
-<div class ="container; vcenter">
-<table>
-      <tr>
-        <td><h2> Picks In </h2></td>
-        <td><h2> Picks Out </h2></td>
-        <td><h2> Trade Results </h2></td>
-      </tr>
-      <tr>
-        <td><h5> Probability of... </h5></td>
-        <td><h5> Probability of... </h5></td>
-        <td><h5> Change in Probability of... </h5></td>
-      </tr>
-{% for post in pageInfo['picks_sorted']%}
-    <tr>
-        <td style="width:30%">{{ post }}: {{ pageInfo['picks_in']['cleanValue'][post]  }} </td>
-        <td style="width:30%">{{ post }}: {{ pageInfo['picks_out']['cleanValue'][post]  }} </td>
-        <td style="width:30%">{{ post }}: {{ pageInfo.trade[post] }} </td>
-    </tr>
-{% endfor %}
- </table>
-</div>
+        <div class ="container; vcenter">
+        <table>
+              <tr>
+                <td><h2> Picks In </h2></td>
+                <td><h2> Picks Out </h2></td>
+                <td><h2> Trade Results </h2></td>
+              </tr>
+              <tr>
+                <td><h5> Probability of... </h5></td>
+                <td><h5> Probability of... </h5></td>
+                <td><h5> Change in Probability of... </h5></td>
+              </tr>
+        {% for post in pageInfo['picks_sorted']%}
+            <tr>
+                <td style="width:30%">{{ post }}: {{ pageInfo['picks_in']['cleanValue'][post]  }} </td>
+                <td style="width:30%">{{ post }}: {{ pageInfo['picks_out']['cleanValue'][post]  }} </td>
+                <td style="width:30%">{{ post }}: {{ pageInfo.trade[post] }} </td>
+            </tr>
+        {% endfor %}
+         </table>
+        </div>
 
 
-<form method="post" autocomplete="on" action="{{ url_for('nfls') }}">
+        <form method="post" autocomplete="on" action="{{ url_for('nfls') }}">
 
-<div style="text-align:center;margin-right:auto;margin-left:auto">
-    <table style="width:100%" align="center">
-      <tr>
-        <td><h5><label for="incoming_picks">Picks In</label></h5></td>
-        <td><h5><label for="outgoing_picks">Picks Out</label></h5></td>
-      </tr>
-      <tr>
-        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= "1,2,3" /></td>
-        <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= "4,5,6" /></td>
-      </tr>
-    </table>
-    <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
-  </form>
-</div>
+        <div style="text-align:center;margin-right:auto;margin-left:auto">
+            <table style="width:100%" align="center">
+              <tr>
+                <td><h5><label for="incoming_picks">Picks In</label></h5></td>
+                <td><h5><label for="outgoing_picks">Picks Out</label></h5></td>
+              </tr>
+              <tr>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= "1,2,3" /></td>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= "4,5,6" /></td>
+              </tr>
+            </table>
+            <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+          </form>
+        </div>
+
+      </body>
 
 </html>
 

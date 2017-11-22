@@ -1,16 +1,7 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        {% extends "gtm.html" %}
-        {% block content %}
-        <title>Juan Lucas</title>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-    </head>
+    {% include "gtm.html" %}
+    <title>Juan Lucas</title>
     <body>
-      <!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DK735S"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
         <div id="container">
             <div class="title">
                 <h1>WELCOME</h1>
@@ -65,6 +56,7 @@
                 <iframe src="//giphy.com/embed/3oFyDgQp4ZhMp3r7lm" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/wundergif-daydream-juan-lucas-3oFyDgQp4ZhMp3r7lm">WHERE AM I</a></p>
           </div>
           </div>
+
     </body>
-    {% endblock %}
+
 </html>
