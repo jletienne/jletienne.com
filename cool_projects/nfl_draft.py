@@ -5,9 +5,9 @@ import json
 import re
 from decimal import *
 
-#from scipy.stats import binom, norm
-#import matplotlib.pyplot as plt
-#import numpy as np
+from scipy.stats import binom, norm
+import matplotlib.pyplot as plt
+import numpy as np
 
 #heroku config:set BUILDPACK_URL=https://github.com/arose13/conda-buildpack.git
 
