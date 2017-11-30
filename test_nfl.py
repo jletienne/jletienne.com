@@ -95,7 +95,7 @@ def nfl_draft():
 
 '''
 
-def nfl_draft():
+def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
     posts = [  # fake array of posts
         {
             'author': {'nickname': 'John'},
@@ -111,11 +111,8 @@ def nfl_draft():
         }
     ]
 
-    picks_in_string = '1,2,3'
-    picks_out_string = '4,5,6'
-    picks_in = picks_in_string.split(",")
-    picks_out = picks_out_string.split(",")  
-
+    picks_in = [s.strip() for s in incoming_picks.split(",")]
+    picks_out = [s.strip() for s in outgoin_picks.split(",")]
 
     # Get Pick JSON data from static file
     def get_picks():
@@ -127,7 +124,7 @@ def nfl_draft():
     def get_points(picks,data):
        return [data[str(pick)]['Points']/10000 for pick in picks]
 
-    # Data we use from get_picks())
+    # Data we use from get_picks9)
     data = get_picks()
 
     # Value picks from binomial cdf
@@ -163,22 +160,35 @@ def nfl_draft():
 
         return x
 
-    picks_in_results = {'rawValue': value_picks(picks_in), 'cleanValue': clean_value_picks(picks_in)}
-    picks_out_results = {'rawValue':value_picks(picks_out), 'cleanValue': clean_value_picks(picks_out)}
+    picks_in_results = {'rawValue': value_picks(picks_in), 'cleanValue': clean_value_picks(picks_in), 'picks': picks_in}
+    picks_out_results = {'rawValue':value_picks(picks_out), 'cleanValue': clean_value_picks(picks_out), 'picks': picks_out}
 
 
     trade_results = compare_picks(picks_in_results['rawValue'], picks_out_results['rawValue'])
 
     user = {'nickname': 'Miguel'}
 
+    def grade_trade(trade_results):
+        if int(trade_results['2 Star'][:-1]) < 0:
+            return "This is a good trade for your team!"
+        elif int(trade_results['2 Star'][:-1]) < 5:
+            return "Decent trade, but you can you get more!"
+        else:
+            return "THAT'S RIGHT I WANT A GM WHO RIPS MOTHERFUCKERS OFF!"
+
+
+    trade_grade = grade_trade(trade_results)
+
     pageInfo = {'user': user,
                 'posts': posts,
                 'title': 'NFL Draft',
                 'picks_in': picks_in_results,
                 'picks_out':picks_out_results,
-                'trade': sorted(trade_results.items(), key=lambda x: x[0])}
+                'trade': trade_results,
+                'picks_sorted': sorted(trade_results),
+                'trade_grade': trade_grade}
+    return pageInfo
 
-    return trade_results
 
 
 

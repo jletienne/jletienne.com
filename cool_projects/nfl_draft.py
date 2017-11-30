@@ -31,8 +31,8 @@ def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
 
 
 
-    picks_in = incoming_picks.split(",")
-    picks_out = outgoing_picks.split(",")
+    picks_in = [s.strip() for s in incoming_picks.split(",")]
+    picks_out = [s.strip() for s in outgoing_picks.split(",")]
 
     # Get Pick JSON data from static file
     def get_picks():
@@ -88,13 +88,25 @@ def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
 
     user = {'nickname': 'Miguel'}
 
+    def grade_trade(trade_results):
+        if int(trade_results['2 Star'][:-1]) < 0:
+            return "This is a good trade for your team!"
+        elif int(trade_results['2 Star'][:-1]) < 5:
+            return "Decent trade, but you can you get more!"
+        else:
+            return "THAT'S RIGHT I WANT A GM WHO RIPS MOTHERFUCKERS OFF!"
+
+
+    trade_grade = grade_trade(trade_results)
+
     pageInfo = {'user': user,
                 'posts': posts,
                 'title': 'NFL Draft',
                 'picks_in': picks_in_results,
                 'picks_out':picks_out_results,
                 'trade': trade_results,
-                'picks_sorted': sorted(trade_results)}
+                'picks_sorted': sorted(trade_results),
+                'trade_grade': trade_grade}
     return pageInfo
     #'trade': sorted(trade_results.items(), key=lambda x: x[0])}
 
