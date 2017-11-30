@@ -8,8 +8,8 @@
     </head>
 
       <body>
-        <p> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </p>
-        <p> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </p>
+        <h6> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </h6>
+        <h6> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </h6>
 
         <div class ="container; vcenter">
         <table>
@@ -25,22 +25,26 @@
               </tr>
         {% for post in pageInfo['picks_sorted']%}
             <tr>
-                <td style="width:30%">{{ post }}: {{ pageInfo['picks_in']['cleanValue'][post]  }} </td>
-                <td style="width:30%">{{ post }}: {{ pageInfo['picks_out']['cleanValue'][post]  }} </td>
-                <td style="width:30%">{{ post }}: {{ pageInfo.trade[post] }} </td>
+                <td style="width:30%"><h7>{{ post }}: {{ pageInfo['picks_in']['cleanValue'][post]  }}</h7></td>
+                <td style="width:30%"><h7>{{ post }}: {{ pageInfo['picks_out']['cleanValue'][post]  }} </h7></td>
+                <td style="width:30%"><h7>{{ post }}: {{ pageInfo.trade[post] }}</h7> </td>
             </tr>
         {% endfor %}
          </table>
         </div>
 
-
+        <div>
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
         <form method="post" autocomplete="on" action="{{ url_for('nfls') }}">
 
         <div style="text-align:center;margin-right:auto;margin-left:auto">
             <table style="width:100%" align="center">
               <tr>
-                <td><h5><label for="incoming_picks">Picks In</label></h5></td>
-                <td><h5><label for="outgoing_picks">Picks Out</label></h5></td>
+                <td><h6><label for="incoming_picks">Picks In</label></h6></td>
+                <td><h6><label for="outgoing_picks">Picks Out</label></h6></td>
               </tr>
               <tr>
                 <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= "1,2,3" /></td>
