@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+      {% include "gtm.html" %}
+      <title> {{ pageInfo['title'] }} </title>
+      <h1> {{ pageInfo['title'] }}</h1>
+  </head>
+
+    <body>
+      <h6> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </h6>
+      <h6> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </h6>
+      <p></p>
+      <h5> Trade Results: <u>{{ pageInfo['trade_grade']}}</u></h5>
+
+      <div class ="container; vcenter">
+      <table>
+            <tr>
+              <td><h2> Picks In </h2></td>
+              <td><h2> Picks Out </h2></td>
+              <td><h2> Trade Results </h2></td>
+            </tr>
+            <tr>
+              <td><h5> Probability of... </h5></td>
+              <td><h5> Probability of... </h5></td>
+              <td><h5> Change in Probability of... </h5></td>
+            </tr>
+      {% for post in pageInfo['picks_sorted']%}
+          <tr>
+              <td style="width:30%"><h7>{{ post }}: {{ pageInfo['picks_in']['cleanValue'][post]  }}</h7></td>
+              <td style="width:30%"><h7>{{ post }}: {{ pageInfo['picks_out']['cleanValue'][post]  }} </h7></td>
+              <td style="width:30%"><h7>{{ post }}: {{ pageInfo.trade[post] }}</h7> </td>
+          </tr>
+      {% endfor %}
+       </table>
+      </div>
+
+      <div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <form method="post" autocomplete="on" action="{{ url_for('nbas') }}">
+
+      <div style="text-align:center;margin-right:auto;margin-left:auto">
+          <table style="width:100%" align="center">
+            <tr>
+              <td><h6><label for="incoming_picks">Picks In</label></h6>(separate with commas)</td>
+              <td><h6><label for="outgoing_picks">Picks Out</label></h6>(separate with commas)</td>
+            </tr>
+            <tr>
+              <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= "1,2,3" /></td>
+              <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= "4,5,6" /></td>
+            </tr>
+          </table>
+          <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+        </form>
+      </div>
+
+    </body>
+
+</html>

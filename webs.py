@@ -6,6 +6,7 @@ from cool_projects.cassel import *
 from cool_projects.chomba import *
 from cool_projects.roundup import *
 from cool_projects.nfl_draft import *
+from cool_projects.nba_draft import *
 
 
 app = Flask(__name__)
@@ -70,6 +71,15 @@ def nfls():
     outgoing_picks=request.form['outgoing_picks']
     return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks))
 
+@app.route('/nba-draft-stars')
+def nba():
+    return render_template('projects/nba-draft-stars.html', pageInfo = nba_draft())
+
+@app.route('/nba-draft-star', methods=['POST', 'GET'])
+def nbas():
+    incoming_picks=request.form['incoming_picks']
+    outgoing_picks=request.form['outgoing_picks']
+    return render_template('projects/nba-draft-stars.html', pageInfo = nba_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks))
 
 
 
