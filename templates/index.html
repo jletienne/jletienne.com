@@ -27,8 +27,32 @@
 
           <div class=main-content>
           <a href=projects>  <h3> 1. SOMETIMES I MAKE PROJECTS CHECK THEM OUT HERE !!!! </h3> </a>
-          <a href=/nfl-draft-stars>  <h3> 2. NFL DRAFT STARS </h3> </a>
+          <a href=/nfl-draft-stars?promo_name=nfl>  <h3> 2. NFL DRAFT STARS </h3> </a>
           <br>
+
+          <script>
+          // An example of measuring promotion views. This example assumes that
+          // information about the promotions displayed is available when the page loads.
+          dataLayer.push({
+            'ecommerce': {
+              'promoView': {
+                'promotions': [                     // Array of promoFieldObjects.
+                 {
+                   'id': 'JUNE_PROMO13',            // ID or Name is required.
+                   'name': 'nfl',
+                   'creative': 'banner1',
+                   'position': 'slot1'
+                 },
+                 {
+                   'id': 'FREE_SHIP13',
+                   'name': 'Free Shipping Promo',
+                   'creative': 'skyscraper1',
+                   'position': 'slot2'
+                 }]
+              }
+            }
+          });
+          </script>
 
           <div>
                 <h4> Oh the places you'll go! Here are some off the cities I've lived "nearby" </h4>
@@ -56,7 +80,7 @@
                 <iframe src="//giphy.com/embed/3oFyDgQp4ZhMp3r7lm" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/wundergif-daydream-juan-lucas-3oFyDgQp4ZhMp3r7lm">WHERE AM I</a></p>
           </div>
           </div>
-
     </body>
+
 
 </html>
