@@ -86,7 +86,7 @@ def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
 
     trade_results = compare_picks(picks_in_results['rawValue'], picks_out_results['rawValue'])
 
-    user = {'nickname': 'Miguel'}
+    user = {'nickname': 'JL'}
 
     def grade_trade(trade_results):
         if int(trade_results['2 Star'][:-1]) < 0:
@@ -94,16 +94,21 @@ def nfl_draft(incoming_picks = '1,2,3', outgoing_picks = '4,5,6' ):
         elif int(trade_results['2 Star'][:-1]) < 5:
             return "Decent trade, but you can you get more!"
         else:
-            return "THAT'S RIGHT I WANT A GM WHO RIPS MOTHERFUCKERS OFF!"
+            return "THAT'S RIGHT I WANT A GM WHO RIPS PEOPLE OFF!"
 
 
     trade_grade = grade_trade(trade_results)
+
+    picks_in_string = re.sub("[^0-9,]", "", str(picks_in_results['picks']))
+    picks_out_string = re.sub("[^0-9,]", "", str(picks_out_results['picks']))
 
     pageInfo = {'user': user,
                 'posts': posts,
                 'title': 'NFL Draft',
                 'picks_in': picks_in_results,
                 'picks_out':picks_out_results,
+                'picks_in_string': picks_in_string,
+                'picks_out_string': picks_out_string,
                 'trade': trade_results,
                 'picks_sorted': sorted(trade_results),
                 'trade_grade': trade_grade}

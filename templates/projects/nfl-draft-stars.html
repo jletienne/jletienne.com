@@ -11,7 +11,7 @@
         <h6> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </h6>
         <h6> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </h6>
         <p></p>
-        <h5> Trade Results: <u>{{ pageInfo['trade_grade']}}</u></h5>
+        <!--<h5> Trade Results: <u>{{ pageInfo['trade_grade']}}</u></h5>-->
 
         <div class ="container; vcenter">
         <table>
@@ -50,8 +50,8 @@
                 <td><h6><label for="outgoing_picks">Picks Out</label></h6>(separate with commas)</td>
               </tr>
               <tr>
-                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= "1,2,3" /></td>
-                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= "4,5,6" /></td>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= {{ pageInfo['picks_in_string'] }}></td>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= {{ pageInfo['picks_out_string'] }}></td>
               </tr>
             </table>
             <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
