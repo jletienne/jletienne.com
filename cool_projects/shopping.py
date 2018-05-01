@@ -20,7 +20,7 @@ def asics(max_price=100):
         return [i for i in products if float(i['price']) < max_price ]
 
     def rejection():
-        rejects = ['nah.', 'nope.', 'nope', 'nada', 'nothing', 'nil', 'no.', 'not today', 'sorry about it', 'not yet', 'patience is a virtue']
+        rejects = ['nah.', 'nope.', 'nope', 'nada', 'nothing', 'nil', 'no.', 'not today', 'sorry about it', 'not yet', 'patience is a virtue', 'nuh uh']
         return random.choice(rejects)
 
     myObject = re.findall(make_regex(), html_source(URL))
@@ -36,7 +36,7 @@ def asics(max_price=100):
         text = rejection()
     return {'Text': text, 'Max_Price': max_price}
 
-
+'''
 def jcrew(max_price=50):
     URL = 'https://www.jcrew.com/search2/index.jsp?N=21+16+10002+11998&Nloc=en&Ntrm=&Npge=1&Nrpp=48&Nsrt=3&hasSplitResults=false'
 
@@ -108,7 +108,7 @@ def jcrew(max_price=50):
         text = rejection()
 
     return {'Text': text, 'Max_Price': max_price}
-
+'''
 
 if __name__ == "__main__":
     print(asics() + '\n' +  jcrew())

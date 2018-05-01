@@ -2,8 +2,7 @@
   <html>
   <head>
       {% include "gtm.html" %}
-      <title> {{ pageInfo['title'] }} </title>
-      <h1> {{ pageInfo['title'] }}</h1>
+      <h1> {{ title }}</h1>
   </head>
 
     <body>
@@ -40,7 +39,7 @@
         <p></p>
         <p></p>
       </div>
-      <form method="post" autocomplete="on" action="{{ url_for('nbas') }}">
+      <form method="post" autocomplete="on" action="{{ url_for('nba') }}">
 
       <div style="text-align:center;margin-right:auto;margin-left:auto">
           <table style="width:100%" align="center">

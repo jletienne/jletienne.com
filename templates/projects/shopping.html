@@ -2,13 +2,14 @@
 <html>
   <head>
       {% include "gtm.html" %}
-      <title>Juan Lucas | Shopping</title>
+
+      <h1> {{ title }}</h1>
 
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
 
         </head>
 
-            <h1> Asics and Button Downs </h1>
+            <h2> Asics and Button Downs </h2>
               <div class="jumbotron">
 
                   <h3>What's good with these Asics, you got some for me? </h3>
@@ -21,7 +22,7 @@
               </div>
 
 
-                  <form method="post" autocomplete="on" action="{{ url_for('shoppin') }}">
+                  <form method="post" autocomplete="on" action="{{ url_for('shopping') }}">
 
               <div style="text-align:center;">
                   <table style="width:100%" align="center">

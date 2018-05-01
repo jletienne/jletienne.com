@@ -2,28 +2,42 @@
 <html>
     <head>
         {% include "gtm.html" %}
-        <title>Juan Lucas | Projects</title>
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
     </head>
+
     <body>
+        <h1> {{ title }}</h1>
         <div id="container">
             <div class="title">
-                <h1>Here are some things I've made</h1>
+
+                <p> Here are some things I've made. A list of Projects by <a href=/about title="Jean-Luc Etienne">Jean-Luc Etienne</a></p>
             </div>
 
-            <a href=lights>  <h3> Arduino Powered Wi-Fi Enabled Smart Lights </h3> </a>
+            <h4> Hobby Projects </h4>
+            <a href=/arduino-wifi-smart-lights>  <h2> Arduino Powered Wi-Fi Enabled Smart Lights </h2> </a>
             <p> No candle lights in here, and lightbulbs are boring</p>
             <p> In my day if you wanted to smart lights you made them yourself!</p>
 
-            <a href=films>  <h3> RTB Films </h3> </a>
+            <a href=films>  <h2> RTB Films </h2> </a>
             <p> You're a grown up now you don't need to make your own decisions, but why should you</p>
             <p> Problem solved this let Richie recommend movies for you to watch!</p>
             <p> that's just one problem, I'm not doing the dishes for you</p>
 
-            <a href=shopping>  <h3> Shopping Spider </h3> </a>
+            <a href=/automated-personal-shopper>  <h2> Shopping Spider </h2> </a>
             <p> Who are two people that you best describe you </p>
             <p> Easy I'm like a cross between Steve Jobs, Sterling Archer, and Kawhi Leonard</p>
             <p> I wear the same thing every day, don't talk much, and use the same repetitive jokes when i do</p>
+
+            <h4> Sports Projects </h4>
+            <a href=/nfl-draft-trade-calculator>  <h2> NFL Draft Trade Calculator </h2> </a>
+            <p> NFL Draft Trade Calculator compares trade value of picks</p>
+            <p> Figure out how badly the Bills get ripped off in trades</p>
+
+            <a href=/nba-draft-trade-calculator>  <h2> NBA Draft Trade Calculator </h2> </a>
+            <p> NBA Draft Trade Calculator compares trade value of picks</p>
+            <p> When are NBA stars drafted</p>
+
 
         </div>
     </body>

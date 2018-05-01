@@ -18,68 +18,89 @@ def hello_world():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html', title="About")
 
 @app.route('/contact')
 def contact():
-    return render_template('contact.html')
+    return render_template('contact.html', title="Contact")
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html', title="Projects")
 
-@app.route('/lights')
+@app.route('/arduino-wifi-smart-lights')
 def lights():
     return render_template('projects/lights.html')
 
-@app.route('/movies')
+@app.route('/lights')
+def lights_rdr():
+    return redirect("/arduino-wifi-smart-lights", code=301)
+
+
 @app.route('/films')
 def films():
-    return render_template('projects/films.html', movie=request_movie())
+    return render_template('projects/films.html', movie=request_movie(), title="RTB Films")
+
+@app.route('/movies')
+def films_rdr():
+    return redirect("/films", code=301)
+
+@app.route('/automated-personal-shopper', methods=['POST', 'GET'])
+def shopping():
+    title = 'Automated Personal Shopper'
+    if request.method == 'POST':
+        max_asics=int(request.form['max_asics'])
+        #max_jcrew=int(request.form['max_jcrew'])
+        #return render_template('projects/shopping.html', asics=asics(max_price=max_asics), jcrew=jcrew(max_price=max_jcrew), title='Shopping Spider')
+        return render_template('projects/shopping.html', asics=asics(max_price=max_asics),jcrew=None, title=title)
+    return render_template('projects/shopping.html', asics=asics(max_price=100),jcrew=None, title=title)
 
 @app.route('/shopping')
-def shopping():
-    return render_template('projects/shopping.html', asics=asics(max_price=100), jcrew=jcrew(max_price=50))
-
-
-@app.route('/shoppin', methods=['POST', 'GET'])
-def shoppin():
-    max_asics=int(request.form['max_asics'])
-    max_jcrew=int(request.form['max_jcrew'])
-    return render_template('projects/shopping.html', asics=asics(max_price=max_asics), jcrew=jcrew(max_price=max_jcrew))
-
-    #return render_template('projects/shopping.html', asics=asics(max_price=request.form['max_asics']), jcrew=jcrew(max_price=request.form['max_jcrew']))
+@app.route('/shoppin')
+def shop_spy():
+    return redirect("/automated-personal-shopper", code=301)
 
 @app.route('/apple')
 def apple():
-    return render_template('projects/apple.html', apple=applebot())
-
-
+    return render_template('projects/apple.html', apple=applebot(), title="Apple")
 
 @app.route('/teams/<team>')
 def teams(team):
     date = getNextEvent(team=team.title())
     return render_template('teams/{}.html'.format(team), eventInfo=eventInfo(team=team.title(), date=date), teamInfo=teamInfo(team.title()))
 
-@app.route('/nfl-draft-stars')
+@app.route('/nfl-draft-trade-calculator', methods=['POST', 'GET'])
 def nfl():
-    return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft())
+    if request.method == 'POST':
+        # do your work here
+        incoming_picks=request.form['incoming_picks']
+        outgoing_picks=request.form['outgoing_picks']
+        return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks), title="NFL Draft Trade Calculator")
+    return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft(), title="NFL Draft Trade Calculator")
 
-@app.route('/nfl-draft-star', methods=['POST', 'GET'])
-def nfls():
-    incoming_picks=request.form['incoming_picks']
-    outgoing_picks=request.form['outgoing_picks']
-    return render_template('projects/nfl-draft-stars.html', pageInfo = nfl_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks))
+@app.route('/nfl-draft-star')
+@app.route('/nfl-draft-stars')
+def nfl_rd():
+    return redirect("/nfl-draft-trade-calculator", code=301)
 
-@app.route('/nba-draft-stars')
+
+
+@app.route('/nba-draft-trade-calculator', methods=['POST', 'GET'])
 def nba():
-    return render_template('projects/nba-draft-stars.html', pageInfo = nba_draft())
+    if request.method == 'POST':
+        incoming_picks=request.form['incoming_picks']
+        outgoing_picks=request.form['outgoing_picks']
+        return render_template('projects/nba-draft-stars.html', pageInfo = nba_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks), title="NBA Draft Trade Calculator")
+    return render_template('projects/nba-draft-stars.html', pageInfo = nba_draft(), title="NBA Draft Trade Calculator")
 
-@app.route('/nba-draft-star', methods=['POST', 'GET'])
-def nbas():
-    incoming_picks=request.form['incoming_picks']
-    outgoing_picks=request.form['outgoing_picks']
-    return render_template('projects/nba-draft-stars.html', pageInfo = nba_draft(incoming_picks=incoming_picks, outgoing_picks=outgoing_picks))
+@app.route('/nba-draft-star')
+@app.route('/nba-draft-stars')
+def nba_rd1():
+    return redirect("/nba-draft-trade-calculator", code=301)
+
+@app.route('/sitemap')
+def site_map():
+    return render_template('sitemap.html', title='Sitemap')
 
 
 

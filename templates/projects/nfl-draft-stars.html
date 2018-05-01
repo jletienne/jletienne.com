@@ -3,15 +3,14 @@
 
     <head>
         {% include "gtm.html" %}
-        <title> NFL Stars </title>
-        <h1> NFL Stars </h1>
+        <h1> {{ title }} </h1>
     </head>
 
       <body>
         <h6> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </h6>
         <h6> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </h6>
         <p></p>
-        <!--<h5> Trade Results: <u>{{ pageInfo['trade_grade']}}</u></h5>-->
+        <h5> Trade Results: <u>{{ pageInfo['trade_grade']}}</u></h5>
 
         <div class ="container; vcenter">
         <table>
@@ -41,7 +40,7 @@
           <p></p>
           <p></p>
         </div>
-        <form method="post" autocomplete="on" action="{{ url_for('nfls') }}">
+        <form method="post" autocomplete="on" action="{{ url_for('nfl') }}">
 
         <div style="text-align:center;margin-right:auto;margin-left:auto">
             <table style="width:100%" align="center">
@@ -50,8 +49,8 @@
                 <td><h6><label for="outgoing_picks">Picks Out</label></h6>(separate with commas)</td>
               </tr>
               <tr>
-                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= {{ pageInfo['picks_in_string'] }}></td>
-                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= {{ pageInfo['picks_out_string'] }}></td>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= {{ pageInfo['picks_in']['picks_in_string'] }}></td>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= {{ pageInfo['picks_out']['picks_out_string'] }}></td>
               </tr>
             </table>
             <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
@@ -61,27 +60,3 @@
       </body>
 
 </html>
-
-
-<!--
-<title> {{pageInfo}} </title>
-<h1> NFL Stars </h1>
-
-{{ pageInfo.posts }}
-<div><p>Hi, {{ pageInfo.user.nickname }}!</p></div>
-{% for post in pageInfo['posts'] %}
-<div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
-{% endfor %}
-
-
-<form name=incoming>
-{% for post in pageInfo['posts'] %}
-<div>  <input type="text" value = {{ post.author.nickname }}> <p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
-{% endfor %}
-</form>
-
-
-{{pageInfo.picks_in}}
-{{pageInfo.picks_out}}
-{{pageInfo.trade}}
--->

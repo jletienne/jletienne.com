@@ -13,24 +13,22 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-5DK735S');
-
-
-
-
     </script>
-
-
-
     <!-- End Google Tag Manager -->
+
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     {% if title %}
-    <title>{{ title }} - Jean-Luc Etienne </title>
+    <title>{{ title }} | Jean-Luc Etienne </title>
     {% else %}
     <title>Welcome to Jean-Luc Etienne</title>
     {% endif %}
   </head>
   <body>
-    <div>Home: <a href="/">Home</a></div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DK735S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div><a href="/">Home</a> &emsp; &emsp;<a href="/projects">Projects</a> &emsp; &emsp;<a href="/about">About</a></div>
     <hr>
     {% block content %}{% endblock %}
   </body>

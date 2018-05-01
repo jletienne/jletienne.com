@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	 	<title>Juan Lucas | Movies</title>
 	  {% include "gtm.html" %}
 </head>
 
 			<body>
-
+			<h1> {{ title }} </h1>
 
       <div class="jumbotron">
 
-        <h1> RTB Films </h1>
 
           <p> You should watch <movie> {{ movie['Film'] }} </movie> ({{ movie['Year'] }}) I gave it a <movie> {{ movie['Rating'] }}</movie> out of 4!</p>
 
@@ -18,6 +16,19 @@
                 <br> <br>
             <a href="/films">  <iframe src="//giphy.com/embed/xThuWcZzGnonnG3ayQ" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></a></p>
 
-     	</div>
-		 </body>
+						<form method="post" autocomplete="on" action="{{ url_for('films') }}">
+<!--
+			      <div style="text-align:center;margin-right:auto;margin-left:auto">
+			          <table style="width:100%" align="center">
+			            <tr>
+			              <td><h6><label for="incoming_picks">Picks In</label></h6>(separate with commas)</td>
+			            </tr>
+			            <tr>
+			              <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= "Get Shorty" /></td>
+			            </tr>
+			          </table>
+			          <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+			        </form>
+     	</div> -->
+		</body>
 </html>
