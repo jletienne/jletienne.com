@@ -67,7 +67,7 @@ def apple():
 @app.route('/teams/<team>')
 def teams(team):
     date = getNextEvent(team=team.title())
-    return render_template('teams/{}.html'.format(team), eventInfo=eventInfo(team=team.title(), date=date), teamInfo=teamInfo(team.title()))
+    return render_template('teams/zteams.html', eventInfo=eventInfo(team=team.title(), date=date), teamInfo=teamInfo(team.title()))
 
 @app.route('/nfl-draft-trade-calculator', methods=['POST', 'GET'])
 def nfl():

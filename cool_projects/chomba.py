@@ -3,6 +3,7 @@ import sys, os
 import json
 import re
 import datetime
+import calendar
 
 def getPlayers(team):
     URL = 'https://chup-chombas.firebaseio.com/Teams/{}/Players.json'.format(team)
@@ -23,8 +24,8 @@ def addEvent(start_time = '10 pm', location = 'location', opponent = 'Opponent',
                     'Location': location,
                     'Opponent': opponent,
                     'Players': players,
-                    'Date': '{:%B %d, %Y}'.format(my_date),
-                    'Date2': my_date,
+                    'Date': '{:%b %d, %Y}'.format(event_date),
+                    'Date2': gameday,
                     'Weekday': weekday,
                 }
 
@@ -76,6 +77,45 @@ def getTeams():
     r = requests.get(URL).json()
     return r
 
+def add_multiple():
+
+
+
+    import requests
+    import json
+    import re
+
+
+    def make_regex(x):
+        ips = x
+        products = "".join(ips)
+        return products
+
+    def html_source(URL):
+        return requests.get(URL).text
+
+    URL = 'http://stats.pointstreak.com/players/print/players-team-schedule.html?teamid=709641&seasonid=17484'
+    game_times = re.findall(make_regex(['<td>(.*)</td>']), html_source(URL))
+    game_dates = re.findall(make_regex(['<td class="text-center">(.*?)</td>']), html_source(URL))
+    home_team2 = re.findall(make_regex(['<td class="text-left"><span class="highlight"></span><a href="players-team.html?(.*?)</a>']), html_source(URL))
+    home_team1 = re.findall(make_regex(['<td class=\"text-left\"><a href="players-team.html?(.*?)</a>']), html_source(URL))
+
+    away_team1 = re.findall(make_regex(['<td class="text-left"><a href="players-team.html?(.*?)</a>']), html_source(URL))
+    away_team2 = re.findall(make_regex(['<td class="text-left"><span class="highlight"></span><a href="players-team.html?(.*?)</a>']), html_source(URL))
+
+    home_teams = [i[31:] for i in home_team1 + home_team2]
+    away_teams = [i[31:] for i in away_team1 + away_team2]
+
+
+    x = zip(game_times, game_dates)#, home_teams)#, away_teams)
+
+
+    for i in x:
+        #print(i[1].strip())
+        hockey_month = int(datetime.datetime.strptime('2018 ' + i[1].strip(), '%Y %a, %b %d').strftime("%m"))
+        hockey_day = int(datetime.datetime.strptime('2018 ' + i[1].strip(), '%Y %a, %b %d').strftime("%d"))
+        addEvent(start_time = i[0], location = 'Allen Hockey Rink', opponent = 'Opponent',year=2018, month=hockey_month, day=hockey_day, team='Red')
+
 
 if __name__ == "__main__":
-    print(cassel())
+    print(add_multiple())
