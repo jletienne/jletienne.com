@@ -33,7 +33,6 @@ gameInfo        { font-weight: 900; text-decoration: underline; color: #435425;}
 .jumbojet       { background: #cee5F5; margin: auto; width: 80%; padding: 2em;
                 text-align: center}
 .main-content   { margin: auto; width: 80%; text-align: left}
-.main-content2   { margin: auto}
 
 
 .btn-primary    { background: #3cdede; height:70em; width:250em; border-radius: 50em; color: rgba(0, 0, 0,1);}
