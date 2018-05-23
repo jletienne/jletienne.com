@@ -9,7 +9,7 @@ from cool_projects.nfl_draft import *
 from cool_projects.nba_draft import *
 
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 app.config.from_object(__name__)
 
 @app.route('/')
@@ -35,7 +35,6 @@ def lights():
 @app.route('/lights')
 def lights_rdr():
     return redirect("/arduino-wifi-smart-lights", code=301)
-
 
 @app.route('/films')
 def films():
@@ -63,6 +62,11 @@ def shop_spy():
 @app.route('/apple')
 def apple():
     return render_template('projects/apple.html', apple=applebot(), title="Apple")
+
+
+@app.route('/sports-team-calendars')
+def sports_calendars():
+    return render_template('teams/sports-team-calendars.html', title="Sports Team Calendars")
 
 @app.route('/teams/<team>')
 def teams(team):

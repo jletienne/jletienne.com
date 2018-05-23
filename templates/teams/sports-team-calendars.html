@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include "gtm.html" %}
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+    </head>
+
+    <body>
+        <div class="main-content">
+        <h1> {{ title }}</h1>
+
+
+        <div id="container">
+
+
+            <p> Find your teams calendars here!</p>
+
+            <h2> Team Calendars </h2>
+            <a href=/teams/red>  <h3> Red Hockey Team </h3> </a>
+            <p> Red Hockey Team Calendar in Allen, Tx</p>
+            <p> Shoot pass kick some.... skates Go Team</p>
+
+            <a href=/teams/purple>  <h3> Purple Hockey Team </h3> </a>
+            <p> Purple Hockey Team Calendar in Allen, Tx</p>
+            <p> Wrap it around and put it in the... net</p>
+
+
+
+            </div>
+
+        </div>
+    </body>
+</html>

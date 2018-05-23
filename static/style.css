@@ -1,27 +1,27 @@
 body            { font-family: sans-serif; background: #eee; }
-a, h1, h2       { color: #377ba8; }
+a, h1       { color: #377ba8; }
 h1, h2          { font-family: 'Georgia', serif;  }
-h1              { border-bottom: 2px solid #3cdede;margin: 10; }
-h2              { font-size: 1.5em; margin:1}
-h3              { font-size: 1em; }
+h1              { border-bottom: .08em solid #3cdede; margin: 10;}
+h2              { font-size: 2em; margin:1}
+h3              { font-size: 1.5em; }
 h4              { font-size: x-large; }
 h5              { font-size: .95em; margin:.3em  }
 h6              { font-size: 1.5em; margin:0}
 h7              { font-size: 1.4em; margin:0}
 strong          { font-family: 'Georgia', font-weight: 900}
+p               { font-size: 1.3em}
 
-
-.page           { margin: 2em auto; width: 90%; border: 5px solid #ccc;
+.page           { margin: 2em auto; width: 90%; border: 2em solid #ccc;
                   padding: 0.8em; background: white; }
 .entries        { list-style: none; margin: 0; padding: 0; }
 .entries li     { margin: 0.8em 1.2em; }
 .entries li h2  { margin-left: -1em; }
-.add-entry      { font-size: 0.9em; border-bottom: 1px solid #ccc; }
+.add-entry      { font-size: 0.9em; border-bottom: 1em solid #ccc; }
 .add-entry dl   { font-weight: bold; }
 .metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
                   margin-bottom: 1em; background: #fafafa; }
 .flash          { background: #cee5F5; padding: 0.5em;
-                  border: 1px solid #aacbe2; }
+                  border: 1em solid #aacbe2; }
 .error          { background: #f0d6d6; padding: 0.5em; }
 
 
@@ -32,10 +32,10 @@ gameInfo        { font-weight: 900; text-decoration: underline; color: #435425;}
                 text-align: center}
 .jumbojet       { background: #cee5F5; margin: auto; width: 80%; padding: 2em;
                 text-align: center}
-.main-content   { margin: auto; width: 90%; text-align: left}
+.main-content   { margin: auto; width: 80%; text-align: left}
+.main-content2   { margin: auto}
 
 
+.btn-primary    { background: #3cdede; height:70em; width:250em; border-radius: 50em; color: rgba(0, 0, 0,1);}
 
-.btn-primary    { background: #3cdede; height:70px; width:250px; border-radius: 50px; color: rgba(0, 0, 0,1);}
-
-.btn-primary:hover {background: #eee; height: 70px; width:250px; border-radius:50px; color: #3cdede;}
+.btn-primary:hover {background: #eee; height: 70em; width:250em; border-radius:50em; color: #3cdede;}
