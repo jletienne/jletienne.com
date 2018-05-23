@@ -1,5 +1,5 @@
-body            { font-family: sans-serif; background: #eee; }
-a, h1       { color: #377ba8; }
+body            { font-family: sans-serif; background: #eee; font-size: 16px}
+a, h1           { color: #377ba8; }
 h1, h2          { font-family: 'Georgia', serif;  }
 h1              { border-bottom: .08em solid #3cdede; margin: 10;}
 h2              { font-size: 2em; margin:1}
@@ -9,7 +9,7 @@ h5              { font-size: .95em; margin:.3em  }
 h6              { font-size: 1.5em; margin:0}
 h7              { font-size: 1.4em; margin:0}
 strong          { font-family: 'Georgia', font-weight: 900}
-p               { font-size: 1.3em}
+p               { font-size: 120%}
 
 .page           { margin: 2em auto; width: 90%; border: 2em solid #ccc;
                   padding: 0.8em; background: white; }
