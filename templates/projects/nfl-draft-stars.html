@@ -3,21 +3,21 @@
 
     <head>
         {% include "gtm.html" %}
-        <h1> {{ title }} </h1>
+        <h1> {{ title }}  </h1>
     </head>
 
       <body>
-        <h6> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </h6>
-        <h6> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </h6>
+        <p> You are receiving picks {{ pageInfo['picks_in']['picks'] }} </p>
+        <p> You are giving away picks {{ pageInfo['picks_out']['picks'] }} </p>
         <p></p>
         <h5> Trade Results: <u>{{ pageInfo['trade_grade']}}</u></h5>
 
         <div class ="container; vcenter">
         <table>
               <tr>
-                <td><h2> Picks In </h2></td>
-                <td><h2> Picks Out </h2></td>
-                <td><h2> Trade Results </h2></td>
+                <td><h5> Picks In </h5></td>
+                <td><h5> Picks Out </h5></td>
+                <td><h5> Trade Results </h5></td>
               </tr>
               <tr>
                 <td><h5> Probability of... </h5></td>
@@ -43,17 +43,17 @@
         <form method="post" autocomplete="on" action="{{ url_for('nfl') }}">
 
         <div style="text-align:center;margin-right:auto;margin-left:auto">
-            <table style="width:100%" align="center">
+            <table style="width:80%" align="center">
               <tr>
                 <td><h6><label for="incoming_picks">Picks In</label></h6>(separate with commas)</td>
                 <td><h6><label for="outgoing_picks">Picks Out</label></h6>(separate with commas)</td>
               </tr>
               <tr>
-                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="incoming_picks" value= {{ pageInfo['picks_in']['picks_in_string'] }}></td>
-                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="outgoing_picks" value= {{ pageInfo['picks_out']['picks_out_string'] }}></td>
+                <td><input style="font-size: 10pt; width:40%; text-align:center" type="text" name="incoming_picks" value= {{ pageInfo['picks_in']['picks_in_string'] }}></td>
+                <td><input style="font-size: 10pt; width:40%; text-align:center" type="text" name="outgoing_picks" value= {{ pageInfo['picks_out']['picks_out_string'] }}></td>
               </tr>
             </table>
-            <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+            <td><input type="submit" style="font-size: 2em; width: 4em; height:2em; border:none" value="Update"/></td>
           </form>
         </div>
 

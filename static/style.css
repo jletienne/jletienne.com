@@ -28,7 +28,7 @@ p               { font-size: 120%}
 movie           { font-weight: 900; text-decoration: underline; font-size: 2em;}
 enhancedText    { font-weight: 900; font-size: 2em; color: #435425;}
 gameInfo        { font-weight: 900; text-decoration: underline; color: #435425;}
-.jumbotron      { margin: auto; width: 80%; padding: 1em;
+.jumbotron      { margin: auto; width: 80%; padding: 1em; line-height: 1.7em;
                 text-align: center}
 .jumbojet       { background: #cee5F5; margin: auto; width: 80%; padding: 2em;
                 text-align: center}
