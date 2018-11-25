@@ -47,6 +47,6 @@ gameInfo        { font-weight: 900; text-decoration: underline; color: #435425;}
 .main-content   { margin: auto; width: 80%; text-align: left}
 
 
-.btn-primary    { background: #3cdede; height:70em; width:250em; border-radius: 50em; color: rgba(0, 0, 0,1);}
+.btn-primary    { background: #3cdede; border-radius: 1em; color: rgba(0, 0, 0,1);}
 
-.btn-primary:hover {background: #eee; height: 70em; width:250em; border-radius:50em; color: #3cdede;}
+.btn-primary:hover {background: #eee; border-radius: 1em; color: #3cdede;}
