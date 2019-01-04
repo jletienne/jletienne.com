@@ -11,7 +11,7 @@ from cool_projects.sslify import SSLify
 
 app = Flask(__name__,static_url_path='/static')
 app.config.from_object(__name__)
-#sslify = SSLify(app)
+sslify = SSLify(app)
 
 
 @app.route('/')
