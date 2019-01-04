@@ -7,10 +7,12 @@ from cool_projects.chomba import *
 from cool_projects.roundup import *
 from cool_projects.nfl_draft import *
 from cool_projects.nba_draft import *
-
+from cool_projects.sslify import SSLify
 
 app = Flask(__name__,static_url_path='/static')
 app.config.from_object(__name__)
+#sslify = SSLify(app)
+
 
 @app.route('/')
 def hello_world():
