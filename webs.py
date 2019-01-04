@@ -106,7 +106,7 @@ def nba_rd1():
 
 @app.route('/sitemap')
 def site_map():
-    return render_template('sitemap.html', title='Sitemap')
+    return render_template('sitemap.xml', title='Sitemap')
 
 
 
