@@ -1,29 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    {% include "gtm.html" %}
 
-    <body>
-        <div id="container">
-            <div class="title">
-                <h1>JL ETIENNE SITEMAP</h1>
-            </div>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      	<loc>https://www.jletienne.com/projects</loc>
+      	<lastmod>2019-01-05</lastmod>
+     </url>
 
-            <br>     <br>
+    <url>
+      	<loc>https://www.jletienne.com/films</loc>
+      	<lastmod>2019-01-05</lastmod>
+     </url>
 
-            <div class="jumbotron">
-              <a href=/projects title="Projects"><h2>Projects</h2>
-              <a href=/films title="Films"><p>Films</p>
-              <a href=/arduino-wifi-smart-lights title="Lights"><p>Lights</p>
-              <a href=/automated-personal-shopper title="Shopping"><p>Shopping</p>
-              <a href=/nba-draft-trade-calculator title="NBA Draft Stars"><p>NBA Draft Stars</p>
-              <a href=/nfl-draft-trade-calculator title="NFL Draft Stars"><p>NFL Draft Stars</p>
-              <br>
-              <a href=/About title="About"><h2>About</h2>
+    <url>
+       <loc>https://www.jletienne.com/arduino-wifi-smart-lights</loc>
+       <lastmod>2019-01-05</lastmod>
+    </url>
 
-            </div>
-        </div>
+    <url>
+       <loc>https://www.jletienne.com/automated-personal-shopper</loc>
+       <lastmod>2019-01-05</lastmod>
+    </url>
+
+    <url>
+       <loc>https://www.jletienne.com/nba-draft-trade-calculator</loc>
+       <lastmod>2019-01-05</lastmod>
+    </url>
+
+    <url>
+       <loc>https://www.jletienne.com/nfl-draft-trade-calculator</loc>
+       <lastmod>2019-01-05</lastmod>
+    </url>
+
+    <url>
+       <loc>https://www.jletienne.com/about</loc>
+       <lastmod>2019-01-05</lastmod>
+    </url>
 
 
-
-
-
-    {% include "footer.html" %}
+ </urlset>
