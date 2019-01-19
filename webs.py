@@ -28,11 +28,11 @@ def contact():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html', title="Projects")
+    return render_template('projects.html', title="Jean-Luc")
 
 @app.route('/arduino-wifi-smart-lights')
 def lights():
-    return render_template('projects/lights.html')
+    return render_template('projects/lights.html', title = 'Smart Lights Project')
 
 @app.route('/lights')
 def lights_rdr():
@@ -48,7 +48,7 @@ def films_rdr():
 
 @app.route('/automated-personal-shopper', methods=['POST', 'GET'])
 def shopping():
-    title = 'Automated Personal Shopper'
+    title = 'Automated Personal Shopper by Jean-Luc Etienne'
     if request.method == 'POST':
         max_asics=int(request.form['max_asics'])
         #max_jcrew=int(request.form['max_jcrew'])
@@ -58,6 +58,7 @@ def shopping():
 
 @app.route('/shopping')
 @app.route('/shoppin')
+@app.route('/shopping-spider')
 def shop_spy():
     return redirect("/automated-personal-shopper", code=301)
 
