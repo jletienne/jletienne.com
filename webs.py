@@ -108,6 +108,10 @@ def nba_rd1():
 def site_map():
     return render_template('sitemap.xml', title='Sitemap')
 
+@app.route('/links')
+def links():
+    return render_template("links.html")
+
 
 
 if __name__ == '__main__':
