@@ -28,7 +28,7 @@ def contact():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html', title="Jean-Luc")
+    return render_template('projects.html', title="Projects")
 
 @app.route('/arduino-wifi-smart-lights')
 def lights():
