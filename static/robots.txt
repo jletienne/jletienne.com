@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /referral_test
+
+User-agent: Yeti
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+Sitemap: https://www.jletienne.com/sitemap

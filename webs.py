@@ -109,9 +109,18 @@ def nba_rd1():
 def site_map():
     return render_template('sitemap.xml', title='Sitemap')
 
+@app.route('/referral_test')
+def referral_test():
+    return render_template("referral_test.html")
+
 @app.route('/links')
 def links():
     return render_template("links.html")
+
+
+@app.route('/robots.txt')
+def robots():
+    return app.send_static_file('robots.txt')
 
 
 

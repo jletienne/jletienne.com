@@ -1,0 +1,51 @@
+<html>
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-99468422-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-99468422-2');
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    {% if title %}
+    <title>{{ title }} | Jean-Luc Etienne | JL Etienne</title>
+    {% else %}
+    <title>Welcome to Jean-Luc Etienne | JL Etienne</title>
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
+    </head>
+
+
+    <body>
+
+      <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+        <!--a href="/"><img alt="Company Logo" class="logo-img" src="static/thirtycrop.png" height="50"></a-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/">Home</a>
+            <a class="nav-item nav-link active" href="/projects">Projects</a>
+            <a class="nav-item nav-link active" href="/about">About</a>
+
+            <a class="nav-item nav-link active" href="https://twitter.com/mynamejl">Twitter</a>
+            <a class="nav-item nav-link active" href="https://linkedin.com/in/jletienne">Linkedin</a>
+            <a class="nav-item nav-link active" href="https://outtheleague.com">Blog</a>
+            </div>
+        </div>
+      </nav>
+
+
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>
