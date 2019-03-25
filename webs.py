@@ -118,6 +118,10 @@ def links():
     return render_template("links.html")
 
 
+@app.route('/checkout')
+def checkout():
+    return render_template("checkout.html")
+
 @app.route('/robots.txt')
 def robots():
     return app.send_static_file('robots.txt')
