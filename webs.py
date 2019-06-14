@@ -117,6 +117,13 @@ def referral_test():
 def links():
     return render_template("links.html")
 
+@app.route('/football')
+def football_redirect():
+    return redirect("/jean-luc-etienne-football", code=301)
+
+@app.route('/jean-luc-etienne-football')
+def football():
+    return render_template("jean-luc-etienne-football.html")
 
 @app.route('/checkout')
 def checkout():
