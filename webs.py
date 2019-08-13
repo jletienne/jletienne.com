@@ -125,6 +125,10 @@ def football_redirect():
 def football():
     return render_template("jean-luc-etienne-football.html")
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 @app.route('/checkout')
 def checkout():
     return render_template("checkout.html")
