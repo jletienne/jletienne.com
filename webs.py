@@ -8,6 +8,7 @@ from cool_projects.roundup import *
 from cool_projects.nfl_draft import *
 from cool_projects.nba_draft import *
 from cool_projects.sslify import SSLify
+from cool_projects.football_expectations import football_expectation
 
 app = Flask(__name__,static_url_path='/static')
 app.config.from_object(__name__)
@@ -91,6 +92,14 @@ def nfl_rd():
     return redirect("/nfl-draft-trade-calculator", code=301)
 
 
+@app.route('/football-expected-wins-calculator', methods=['POST', 'GET'])
+def football_expected_wins():
+    if request.method == 'POST':
+        points_for=int(request.form['points_for'])
+        points_against=int(request.form['points_against'])
+        return render_template("projects/football-expected-wins-calculator.html", pageInfo = football_expectation(points_for=points_for, points_against=points_against), title="Football Expected Wins Calculator")
+    return render_template("projects/football-expected-wins-calculator.html", pageInfo = football_expectation(), title="Football Expected Wins Calculator")
+
 
 @app.route('/nba-draft-trade-calculator', methods=['POST', 'GET'])
 def nba():
@@ -132,6 +141,8 @@ def page_not_found(e):
 @app.route('/checkout')
 def checkout():
     return render_template("checkout.html")
+
+
 
 @app.route('/robots.txt')
 def robots():

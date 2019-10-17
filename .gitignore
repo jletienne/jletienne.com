@@ -89,3 +89,6 @@ ENV/
 .ropeproject
 
 templates/checkout.html
+
+#Jupyter Notebooks
+*.ipynb

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+
+    <head>
+        {% include "gtm.html" %}
+        <h1> {{ title }}  </h1>
+    </head>
+
+      <body>
+        <p> You've scored {{ pageInfo['points_for'] }} points </p>
+        <p> You've allowed {{ pageInfo['points_against']}} points </p>
+        <p></p>
+        <h5> Trade Results: <u>{{ pageInfo['verdict']}}</u></h5>
+
+        <form method="post" autocomplete="on" action="{{ url_for('football_expected_wins') }}">
+        <div style="text-align:center;margin-right:auto;margin-left:auto">
+            <table style="width:100%" align="center">
+              <tr>
+                <td><h6><label for="points_for">Points For</label></h6></td>
+                <td><h6><label for="points_against">Points Against</label></h6></td>
+              </tr>
+              <tr>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="points_for" value= "1" /></td>
+                <td><input style="font-size: 10pt; width:200px; text-align:center" type="text" name="points_against" value= "1" /></td>
+              </tr>
+            </table>
+            <td><input type="submit" style="font-size: 30pt; width: 5em; height:2em; border:none" value="Update"/></td>
+          </form>
+        </div>
+
+
+      </body>
+
+</html>
