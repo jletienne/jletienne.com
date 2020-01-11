@@ -6,44 +6,66 @@
       	<lastmod>2019-01-18</lastmod>
      </url>
 
+   </br>
+
     <url>
       	<loc>https://www.jletienne.com/films</loc>
       	<lastmod>2019-01-18</lastmod>
      </url>
+
+     </br>
 
     <url>
        <loc>https://www.jletienne.com/arduino-wifi-smart-lights</loc>
        <lastmod>2019-01-18</lastmod>
     </url>
 
+         </br>
+
     <url>
        <loc>https://www.jletienne.com/automated-personal-shopper</loc>
        <lastmod>2019-01-18</lastmod>
     </url>
+
+         </br>
 
     <url>
        <loc>https://www.jletienne.com/nba-draft-trade-calculator</loc>
        <lastmod>2019-01-18</lastmod>
     </url>
 
+         </br>
+
     <url>
        <loc>https://www.jletienne.com/nfl-draft-trade-calculator</loc>
        <lastmod>2019-01-18</lastmod>
     </url>
 
+         </br>
+
     <url>
-       <loc>https://www.jletienne.com/about</loc>
+       <a href='https://www.jletienne.com/about'><loc >https://www.jletienne.com/about</loc></a>
        <lastmod>2019-05-26</lastmod>
     </url>
+
+         </br>
 
     <url>
        <loc>https://www.jletienne.com/jean-luc-etienne-football</loc>
        <lastmod>2019-06-14</lastmod>
     </url>
 
+         </br>
     <url>
        <loc>https://www.jletienne.com/links</loc>
        <lastmod>2019-01-18</lastmod>
     </url>
+
+  </br>
+    <url>
+       <a href='https://www.jletienne.com/football-expected-wins-calculator'><loc >https://www.jletienne.com/football-expected-wins-calculator</loc></a>
+       <lastmod>2019-05-26</lastmod>
+    </url>
+
 
  </urlset>
