@@ -97,7 +97,12 @@ def nfl_draft(incoming_picks = '2,3,1', outgoing_picks = '44,5,6' ):
         print('case1', p1star)
         print('case2', p2star)
 
-        if   p1star <= -5 and p2star < -5:
+        if len(picks_in) == len(picks_out) == 1:
+            if p1star >= 0:
+                return "Man you fleeced the Rival GM"
+            else:
+                return "Straight up, this is a bad trade"
+        elif p1star <= -5 and p2star < -5:
             return "This trade won't turn out well!"
         elif p1star > 5 and p2star > 5 :
             return "THAT'S RIGHT I WANT A GM WHO RIPS PEOPLE OFF!!"
