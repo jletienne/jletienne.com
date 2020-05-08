@@ -92,3 +92,4 @@ templates/checkout.html
 
 #Jupyter Notebooks
 *.ipynb
+*.xlsx
