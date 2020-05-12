@@ -6,7 +6,7 @@ import re
 from decimal import *
 
 from scipy.stats import binom, norm
-import matplotlib.pyplot as plt
+
 import numpy as np
 
 
