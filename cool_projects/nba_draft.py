@@ -90,7 +90,7 @@ def nba_draft(incoming_picks = '1,2', outgoing_picks = '4,5' ):
         elif int(trade_results['1 Star'][:-1]) < 5:
             return "Decent trade, but you can you get more!"
         else:
-            return "THAT'S RIGHT I WANT A GM WHO RIPS MOTHERFUCKERS OFF!"
+            return "THAT'S RIGHT I WANT A GM WHO RIPS OTHERS OFF!"
 
 
 
