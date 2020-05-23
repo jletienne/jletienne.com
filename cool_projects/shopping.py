@@ -5,7 +5,7 @@ import json
 import re
 
 def asics(max_price=100):
-    URL = 'http://www.onitsukatiger.com/us/en-us/mens/c/mens-shoes?q=:relevance:gender:MALE:shoeSizeCode:10.5:model:Colorado%20Eighty-Five'
+    URL = 'https://www.onitsukatiger.com/us/en-us/men/c/ao30000000/?prefn1=size&prefv1=9.5'
 
     def html_source(URL):
         return requests.get(URL).text
@@ -23,18 +23,26 @@ def asics(max_price=100):
         rejects = ['nah.', 'nope.', 'nope', 'nada', 'nothing', 'nil', 'no.', 'not today', 'sorry about it', 'not yet', 'patience is a virtue', 'nuh uh']
         return random.choice(rejects)
 
-    myObject = re.findall(make_regex(), html_source(URL))
-    shoes = json.loads(myObject[0][:-2])
-    shoes_list = shoes['impressions']
+    print('hello')
+    try:
+        print('what')
+        myObject = re.findall(make_regex(), html_source(URL))
+        print('yes')
+        print(myObject)
+        print(json.loads(myObject[0]))
+        shoes = json.loads(myObject[0][:-2])
+        shoes_list = shoes['impressions']
 
 
-    quant = len(get_sales(products=shoes_list, max_price=max_price))
+        quant = len(get_sales(products=shoes_list, max_price=max_price))
 
-    if quant >0:
-        text = 'hey john luck there are {} shoes that would interest you!'.format(quant)
-    else:
+        if quant >0:
+            text = 'hey john luck there are {} shoes that would interest you!'.format(quant)
+        else:
+            text = rejection()
+    except:
         text = rejection()
-    return {'Text': text, 'Max_Price': max_price}
+    return {'Text': text, 'Max_Price': max_price, 'URL': URL}
 
 '''
 def jcrew(max_price=50):

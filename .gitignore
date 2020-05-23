@@ -93,3 +93,5 @@ templates/checkout.html
 #Jupyter Notebooks
 *.ipynb
 *.xlsx
+
+templates/j30_notebook.html
