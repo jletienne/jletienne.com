@@ -35,14 +35,14 @@ htthttplib2==0.18.1 #updated 2020-08-28
 
 
 #updated 2020-08-28
-cachetools=4.1.1
-google-api-core=1.22.1
-google-api-python-client=1.11.0
-google-auth=1.21.0
-google-auth-httplib2=0.0.4
-googleapis-common-protos=1.52.0
-protobuf=3.13.0
-pyasn1=0.4.8
-pyasn1-modules=0.2.8
-rsa=4.6
-uritemplate=3.0.1
+cachetools==4.1.1
+google-api-core==1.22.1
+google-api-python-client==1.11.0
+google-auth==1.21.0
+google-auth-httplib2==0.0.4
+googleapis-common-protos==1.52.0
+protobuf==3.13.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+rsa==4.6
+uritemplate==3.0.1
