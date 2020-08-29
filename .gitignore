@@ -95,3 +95,6 @@ templates/checkout.html
 *.xlsx
 
 templates/j30_notebook.html
+templates/test_squarespace.html
+
+credentials/

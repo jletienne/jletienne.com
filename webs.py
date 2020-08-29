@@ -146,6 +146,9 @@ def checkout():
 def j30():
     return render_template("j30_notebook.html")
 
+
+
+
 @app.route('/robots.txt')
 def robots():
     return app.send_static_file('robots.txt')
