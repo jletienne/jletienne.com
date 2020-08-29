@@ -4,7 +4,7 @@ import requests
 import io
 from cool_projects.scrobble_helpers import *
 from cool_projects.g_sheets import do_all, do_all2
-
+import os
 
 if os.environ.get('HEROKU'):
     a2 = os.environ.get('SCROBBLE_CREDENTIALS')
