@@ -17,7 +17,7 @@ else:
 key = credentials['api_key']
 user= credentials['user']
 
-url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user={}&api_key={}&format=json'.format(user, key)
+url = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user={}&api_key={}&format=json&limit=200'.format(user, key)
 r = requests.get(url)
 tracks = r.json()
 print(r.status_code)
