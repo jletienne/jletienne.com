@@ -142,10 +142,13 @@ def page_not_found(e):
 def checkout():
     return render_template("checkout.html")
 
-@app.route('/j30')
-def j30():
-    return render_template("j30_notebook.html")
+#@app.route('/j30')
+#def j30():
+#    return render_template("j30_notebook.html")
 
+@app.route('/callback')
+def callback():
+    return render_template("callback.html")
 
 
 
