@@ -15,6 +15,7 @@ app.config.from_object(__name__)
 sslify = SSLify(app)
 
 
+
 @app.route('/')
 def hello_world():
     return render_template('index.html')
