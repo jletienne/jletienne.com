@@ -10,17 +10,7 @@ import requests
 import yaml
 import io
 
-print('get 4')
 
-if os.environ.get('HEROKU'):
-    token = os.environ.get('fitbod_token')
-    channel_id = os.environ.get('workout_channel')
-else:
-    token = yaml.safe_load(open('config.yaml'))['fitbod_token']
-    channel_id = yaml.safe_load(open('config.yaml'))['workout_channel']
-
-print('get 5')
-client = WebClient(token)
 
 
 # Store conversation history
@@ -28,6 +18,20 @@ conversation_history = []
 # ID of the channel you want to send the message to
 
 def get_fitbod_data():
+
+    print('get 4')
+
+    if os.environ.get('HEROKU'):
+        token = os.environ.get('fitbod_token')
+        channel_id = os.environ.get('workout_channel')
+    else:
+        token = yaml.safe_load(open('config.yaml'))['fitbod_token']
+        channel_id = yaml.safe_load(open('config.yaml'))['workout_channel']
+
+    print('get 5')
+    client = WebClient(token)
+
+
     try:
         # Call the conversations.history method using the WebClient
         # conversations.history returns the first 100 messages by default
@@ -42,12 +46,22 @@ def get_fitbod_data():
         #print("{} messages found in {}".format(len(conversation_history), id))
 
         newest_workout_url = conversation_history[0]['files'][0]['url_private']
-        return newest_workout_url
+
+        raw_workout_data = requests.get(newest_workout_url, headers={'Authorization': 'Bearer %s' % token})
+        workout_data_text = io.StringIO(raw_workout_data.text)
+        x = pd.read_csv(workout_data_text)
+        final = x.sort_values('Date')
+        return final
+
 
     except SlackApiError as e:
         logger.error("Error creating conversation: {}".format(e))
 
+def get_fitbod_filter_data(final):
+    final = get_fitbod_data()
+    fitbod_filtered_data = final[final['Date'] > get_last_fitbod_date()]
+    return fitbod_filtered_data
 
 
 if __name__ == '__main__':
-    get_last_fitbod_date()
+    get_fitbod_filter_data()
