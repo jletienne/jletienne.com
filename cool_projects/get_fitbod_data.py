@@ -11,8 +11,13 @@ import yaml
 import io
 
 
-token = yaml.safe_load(open('config.yaml'))['token']
-channel_id = yaml.safe_load(open('config.yaml'))['workout_channel']
+if os.environ.get('HEROKU'):
+    token = os.environ.get('fitbod_token')
+    token = os.environ.get('workout_channel')
+else:
+    token = yaml.safe_load(open('config.yaml'))['fitbod_token']
+    channel_id = yaml.safe_load(open('config.yaml'))['workout_channel']
+    
 client = WebClient(token)
 
 
