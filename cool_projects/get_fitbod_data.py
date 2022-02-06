@@ -10,6 +10,7 @@ import requests
 import yaml
 import io
 
+print('get 4')
 
 if os.environ.get('HEROKU'):
     token = os.environ.get('fitbod_token')
@@ -17,7 +18,8 @@ if os.environ.get('HEROKU'):
 else:
     token = yaml.safe_load(open('config.yaml'))['fitbod_token']
     channel_id = yaml.safe_load(open('config.yaml'))['workout_channel']
-    
+
+print('get 5')
 client = WebClient(token)
 
 
@@ -33,6 +35,8 @@ def get_fitbod_data():
         result = client.conversations_history(channel=channel_id)
 
         conversation_history = result["messages"]
+
+        print('get 6')
 
         # Print results
         #print("{} messages found in {}".format(len(conversation_history), id))

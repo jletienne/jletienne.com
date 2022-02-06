@@ -17,9 +17,11 @@ else:
 key = credentials['api_key']
 user= credentials['user']
 
+print('running now 1')
 
 def update():
 
+    print('running now 2')
     try:
         final = get_recent_tracks_df()
 
@@ -30,6 +32,7 @@ def update():
         print('it messed up')
         new_data = 'Done'
 
+    print('running now 3')    
     if len(new_data) > 0:
         stream = io.StringIO()
         new_data.to_csv(stream, header=False, index=False)
