@@ -149,7 +149,6 @@ simplegeneric=0.8.1=py35_1
 singledispatch=3.4.0.3=py35_0
 sip=4.16.9=py35_0
 six=1.10.0=py35_0
-slack-sdk=3.13.0
 snowballstemmer=1.2.1=py35_0
 sockjs-tornado=1.0.3=py35_0
 sphinx=1.4.1=py35_0

@@ -46,3 +46,6 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 rsa==4.6
 uritemplate==3.0.1
+
+#updated 2022-02-06
+slack-sdk==3.13.0
