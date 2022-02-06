@@ -5,6 +5,7 @@ import io
 from cool_projects.get_fitbod_data import *
 from cool_projects.freddie_coach_g_sheets import do_all, do_all2
 import os
+import json
 
 if os.environ.get('HEROKU'):
     a2 = os.environ.get('SCROBBLE_CREDENTIALS')
