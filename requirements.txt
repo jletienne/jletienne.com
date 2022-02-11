@@ -41,7 +41,7 @@ google-api-python-client==1.11.0
 google-auth==1.21.0
 google-auth-httplib2==0.0.4
 googleapis-common-protos==1.52.0
-protobuf==3.13.0
+protobuf==3.15.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 rsa==4.6
