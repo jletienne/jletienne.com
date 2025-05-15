@@ -151,6 +151,7 @@ def days_count():
     return render_template("count.html", days_since=days_since)
 
 @app.route('/last')
+@app.route('/recent')
 def last_recent_tracks():
     tracks = pd.read_csv('archive/dope_recent_tracks.csv')
     return render_template("last_recent_tracks.html", data=tracks.to_dict(orient='records'))
