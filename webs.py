@@ -140,10 +140,6 @@ def football():
 def page_not_found(e):
     return render_template('404.html'), 404
 
-@app.route('/test_squarespace')
-def checkout():
-    return render_template("test_squarespace.html")
-
 @app.route('/count')
 def days_count():
     from datetime import datetime, timedelta, date  
