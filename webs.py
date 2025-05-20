@@ -9,6 +9,7 @@ from cool_projects.nfl_draft import *
 from cool_projects.nba_draft import *
 from cool_projects.sslify import SSLify
 from cool_projects.football_expectations import football_expectation
+import pandas as pd
 
 app = Flask(__name__,static_url_path='/static')
 app.config.from_object(__name__)
@@ -139,9 +140,25 @@ def football():
 def page_not_found(e):
     return render_template('404.html'), 404
 
-@app.route('/checkout')
+@app.route('/test_squarespace')
 def checkout():
-    return render_template("checkout.html")
+    return render_template("test_squarespace.html")
+
+@app.route('/count')
+def days_count():
+    from datetime import datetime, timedelta, date  
+    days_since = date.today() - date(2024,8,12)
+    return render_template("count.html", days_since=days_since)
+
+@app.route('/last')
+@app.route('/recent')
+def last_recent_tracks():
+    tracks = pd.read_csv('archive/dope_recent_tracks.csv')
+    return render_template("last_recent_tracks.html", data=tracks.to_dict(orient='records'))
+
+@app.route('/music_creation')
+def music_creation():
+    return render_template("music/music_creation.html")
 
 #@app.route('/j30')
 #def j30():

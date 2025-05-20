@@ -58,12 +58,27 @@ def find_sheet_id_by_name(sheet_name):
                 return sheet['properties']['sheetId']
 
 
-def get_final_sheet_row_number():
+def get_final_sheet_row_number(spreadsheetId = '1fSf8fvu9hfxtU1DTTfyokIU1SIvzy26dmEVaamIdzTU', range='song_data!A:A'):
     sheet = API.spreadsheets()
-    result = sheet.values().get(spreadsheetId = '1fSf8fvu9hfxtU1DTTfyokIU1SIvzy26dmEVaamIdzTU', range='song_data!A:A').execute()
+    result = sheet.values().get(spreadsheetId = spreadsheetId, range=range).execute()
     values = result.get('values', [])
 
     return len(values)
+
+def get_all_artists_df():
+    sheet = API.spreadsheets()
+    result = sheet.values().get(spreadsheetId = '1fSf8fvu9hfxtU1DTTfyokIU1SIvzy26dmEVaamIdzTU', range='song_data!A2:A').execute()
+    values = result.get('values', [])
+    return values
+
+def get_known_artists_df():
+    sheet = API.spreadsheets()
+    result = sheet.values().get(spreadsheetId = '1fSf8fvu9hfxtU1DTTfyokIU1SIvzy26dmEVaamIdzTU', range='artist_info!A2:A').execute()
+    known_artist_values = result.get('values', [])
+    return known_artist_values
+
+
+
 
 
 def push_csv_to_gsheet(csv_path, sheet_id, start_row):
@@ -98,7 +113,7 @@ def do_all(path_to_csv):
     push_csv_to_gsheet(
         csv_path=path_to_csv,
         sheet_id=find_sheet_id_by_name(worksheet_name),
-        start_row=get_final_sheet_row_number()
+        start_row=get_final_sheet_row_number(spreadsheetId = '1fSf8fvu9hfxtU1DTTfyokIU1SIvzy26dmEVaamIdzTU', range='song_data!A:A')
     )
 
     return 'yes'
@@ -111,6 +126,14 @@ def do_all2(path_to_csv):
     )
 
     return 'max_date_uts updated success!'
+
+def update_gsheet_artist_info_genre(path_to_csv):
+    push_csv_to_gsheet(
+        csv_path=path_to_csv,
+        sheet_id=find_sheet_id_by_name('artist_info'),
+        start_row=get_final_sheet_row_number(spreadsheetId = '1fSf8fvu9hfxtU1DTTfyokIU1SIvzy26dmEVaamIdzTU', range='artist_info!A:A')
+    )
+    return 'artist info genre success!' 
 
 def get_last_date():
 
