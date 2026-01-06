@@ -22,10 +22,10 @@ def update_health_steps():
 
     health_updates = [
         ('1eUSxuwoYrPbY0iL3JotWekR6zDTlpPgx', '1Mj3VpGIALaA4ojJnLb1-yTScIvoa90woOfHivOW-_Ig', 'walking_steps'),
-        ('1cdgg3en__pgd0T6NytbdO0ZPcR2iosW5', '19X6VzxZhp6SdBCwfN4hKmw2bTcevhJkx5TuksQY4Z6w', 'sleep_hours')
-        #('1mxK_-jWDMRIvB3PoTERfyZ_aqLbPIlhQ', '11Wt7KUH9wUBkAFYGceCrDcoraGD-HdcMexD9ht0-t6zc', 'weight_lbs')
+        ('1vXXghTEtu8olOXdNE5_v81Try02w8ub7', '1A7ugrJSoC7L6Jx66nEHjWP7hOSbQ3-hhqE7ha_hIu0c', 'weight'),
+        ('1st423xCXiPmTjfwRZRGLsbCP1XrJuGZv', '15cUCWS6swZd5WUj1dzQXT4hGmVEoadFZ8SQPdpaeS5k', 'sleep_hrs')
     ]
-    
+
     for i in health_updates:
 
         final = get_health_steps_df(folder_id=i[0])
@@ -38,8 +38,8 @@ def update_health_steps():
         new_data.to_csv(stream, header=False, index=False)
         stream.seek(0)
         do_all_health(stream, SPREADSHEET_ID=i[1])
-    
-        
+
+
     return 'done'
 
 
@@ -54,4 +54,3 @@ if __name__ == '__main__':
 # Union all files
 # Append to google sheet
 # run every half hour
-
