@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import io
 from cool_projects.health_helpers import *
-from cool_projects.g_sheets_health import get_health_steps_df, do_all_health
+from cool_projects.g_sheets_health import get_health_steps_df, do_all_health, get_health_weight_df
 import os
 
 if os.environ.get('HEROKU'):
@@ -28,7 +28,11 @@ def update_health_steps():
 
     for i in health_updates:
 
-        final = get_health_steps_df(folder_id=i[0])
+        if i[2] == 'weight':
+            final = get_health_weight_df(folder_id=i[0])
+        else:
+            final = get_health_steps_df(folder_id=i[0])
+
         new_data = final
         #print(new_data)
 

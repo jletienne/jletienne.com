@@ -76,6 +76,37 @@ def get_health_steps_df(folder_id):
     #final_df['date_uts'] = final_df['date_uts'].astype(int)
     return final_df
 
+
+def get_health_weight_df(folder_id):
+    all_steps = []
+
+    results = service.files().list(
+        q=f"'{folder_id}' in parents and mimeType='text/csv'",
+        fields="files(id, name)"
+    ).execute()
+
+    files = results.get("files", [])
+
+    for file in files:
+        file_id = file["id"]
+        request = service.files().get_media(fileId=file_id)
+        fh = io.BytesIO()
+        downloader = googleapiclient.http.MediaIoBaseDownload(fh, request)
+
+        done = False
+        while not done:
+            status, done = downloader.next_chunk()
+
+        fh.seek(0)
+        df = pd.read_csv(fh)
+        if 'Weight (lb)' in df.columns:
+            all_steps.append(df)
+
+    final_df = pd.concat(all_steps, ignore_index=True)
+    final_df = final_df[['Date/Time', 'Weight (lb)']]
+    final_df = final_df.dropna(subset=['Weight (lb)'])
+    return final_df
+
 def find_sheet_id_by_name(sheet_name, SPREADSHEET_ID):
     # ugly, but works
     sheets_with_properties = API \
@@ -116,17 +147,16 @@ def do_all_health(path_to_csv, SPREADSHEET_ID):
 
     # Get this one from the link in browser
     worksheet_name = 'Sheet1'
-    
+
     push_health_to_gsheet(
     csv_path=path_to_csv,
     sheet_id=find_sheet_id_by_name(worksheet_name, SPREADSHEET_ID),
     SPREADSHEET_ID=SPREADSHEET_ID
     )
-    
+
 
     return 'yes'
 
 
 if __name__ == '__main__':
     print(update_google_sheet_health_steps())
-
